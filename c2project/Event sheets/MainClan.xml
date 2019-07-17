@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainClan</name>
+    <events>
+        <include>debugEvenst</include>
+        <include>commonEvents</include>
+        <event-block sid="415495816545104">
+            <conditions>
+                <condition id="17" name="On back button" sid="215212533567869" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="2209054930284576" type="Function">
+                    <param id="0" name="Name">&quot;backBtn_leave&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

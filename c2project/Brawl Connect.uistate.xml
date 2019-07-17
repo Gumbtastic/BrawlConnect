@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Preload</layout>
+        <event-sheet order="1">commonEvents</event-sheet>
+        <event-sheet order="7">MainMatchesJoin</event-sheet>
+        <event-sheet order="2">PreloadEvents</event-sheet>
+        <event-sheet order="3">MainMatches</event-sheet>
+        <event-sheet order="5">openGameRoomEvents</event-sheet>
+        <event-sheet active="1" order="6">GameRoomEvents</event-sheet>
+        <event-sheet order="4">MainMatchesGate</event-sheet>
+        <event-sheet order="0">Variables</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="0">
+        <family expanded="0" name="movers_sprite" />
+        <family expanded="0" name="movers_txt" />
+        <family expanded="0" name="menuMovers_sprite" />
+        <family expanded="0" name="menuMover_txt" />
+        <family expanded="0" name="Fonts" />
+        <family expanded="0" name="input_txtBox" />
+        <family expanded="0" name="dialog_sprites" />
+        <family expanded="0" name="dialog_texts" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/navBar/" />
+        <folder expanded="1" path="animation-folder/btn_menu/" />
+        <folder expanded="1" path="animation-folder/btn_gameLeague/" />
+        <folder expanded="1" path="animation-folder/keyLine/" />
+        <folder expanded="1" path="animation-folder/tabBar/" />
+        <folder expanded="1" path="animation-folder/tabBar_sub/" />
+        <folder expanded="1" path="animation-folder/shortProfileBG/" />
+        <folder expanded="1" path="animation-folder/menu_buttonBG/" />
+        <folder expanded="1" path="animation-folder/avatar/" />
+        <folder expanded="1" path="animation-folder/btn_bg_gray/" />
+        <folder expanded="1" path="animation-folder/btn_bg_tabBar/" />
+        <folder expanded="1" path="animation-folder/icon/" />
+        <folder expanded="1" path="animation-folder/table_bg/" />
+        <folder expanded="1" path="animation-folder/scrollBG/" />
+        <folder expanded="1" path="animation-folder/button_graycircle/" />
+        <folder expanded="1" path="animation-folder/loading/" />
+        <folder expanded="1" path="animation-folder/avatar_room/" />
+        <folder expanded="1" path="animation-folder/btn_checkbox/" />
+        <folder expanded="1" path="animation-folder/scrollBG2/" />
+        <folder expanded="1" path="animation-folder/tile/" />
+        <folder expanded="1" path="animation-folder/slide_overlay/" />
+        <folder expanded="1" path="animation-folder/btn_slide_left/" />
+        <folder expanded="1" path="animation-folder/btn_slide_right/" />
+        <folder expanded="1" path="animation-folder/dialog_bg_small/" />
+        <folder expanded="1" path="animation-folder/icon_league/" />
+        <folder expanded="1" path="animation-folder/icon_rules/" />
+        <folder expanded="1" path="animation-folder/icon_limit/" />
+        <folder expanded="1" path="animation-folder/icon_custom/" />
+        <folder expanded="1" path="animation-folder/icon_handicap/" />
+        <folder expanded="1" path="animation-folder/icon_damage/" />
+        <folder expanded="1" path="animation-folder/icon_private/" />
+    </folders-expanded>
+</c2uistate>

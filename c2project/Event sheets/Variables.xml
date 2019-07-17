@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Variables</name>
+    <events>
+        <variable constant="0" name="sorting" sid="2172909574043073" static="0" type="text">all</variable>
+        <variable constant="0" name="rankingTable" sid="6878729432782324" static="0" type="text">division</variable>
+        <variable constant="0" name="enterdRoom" sid="7469462044244207" static="0" type="number">0</variable>
+        <variable constant="0" name="roomListY" sid="5541422778805596" static="0" type="number">480</variable>
+        <variable constant="0" name="leaveRoom" sid="9965830266082883" static="0" type="number">0</variable>
+        <variable constant="0" name="player4alive" sid="9622973508330822" static="0" type="number">0</variable>
+        <variable constant="0" name="player3alive" sid="5308582174665029" static="0" type="number">0</variable>
+        <variable constant="0" name="player2alive" sid="3194881271155835" static="0" type="number">0</variable>
+        <variable constant="0" name="player1Alive" sid="4939538710508895" static="0" type="number">0</variable>
+        <variable constant="0" name="room_seed" sid="620197995774823" static="0" type="text"></variable>
+        <variable constant="0" name="room_private" sid="7179124201581341" static="0" type="text">no</variable>
+        <variable constant="0" name="room_league" sid="5859713756568059" static="0" type="text">1on1</variable>
+        <variable constant="0" name="room_damage" sid="7046458151032552" static="0" type="text">x 1.0</variable>
+        <variable constant="0" name="room_handicap" sid="8064557445198983" static="0" type="text">off</variable>
+        <variable constant="0" name="room_custom" sid="3241974582854706" static="0" type="text">off</variable>
+        <variable constant="0" name="room_limit" sid="8258227543515098" static="0" type="number">2</variable>
+        <variable constant="0" name="room_rules" sid="4678649841142312" static="0" type="text">Time</variable>
+        <variable constant="0" name="GameType" sid="6052047076800095" static="0" type="text">For Fun</variable>
+        <variable constant="0" name="roomName" sid="2476669713441542" static="0" type="text"></variable>
+        <variable constant="0" name="salt" sid="5706672186737408" static="0" type="text"></variable>
+        <variable constant="0" name="authCD" sid="7408740478525056" static="0" type="number">0</variable>
+        <variable constant="0" name="MyID" sid="1522542685419897" static="0" type="number">0</variable>
+        <variable constant="0" name="MyPassword" sid="3934946374399433" static="0" type="text"></variable>
+        <variable constant="0" name="MyUsername" sid="7277766270839411" static="0" type="text"></variable>
+        <variable constant="0" name="MyEmail" sid="5642578087048473" static="0" type="text"></variable>
+        <variable constant="0" name="authTrigger" sid="7953416658281404" static="0" type="number">0</variable>
+        <variable constant="0" name="leaveTrigger" sid="9736435137478767" static="0" type="number">0</variable>
+        <variable constant="0" name="MyName" sid="9810904626172329" static="0" type="text"></variable>
+        <variable constant="0" name="MyAvatar" sid="6360743102404069" static="0" type="number">-1</variable>
+    </events>
+</c2eventsheet>

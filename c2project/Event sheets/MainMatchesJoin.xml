@@ -1,0 +1,619 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMatchesJoin</name>
+    <events>
+        <include>debugEvenst</include>
+        <include>commonEvents</include>
+        <event-block sid="8655666858656016">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7289928056401009" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3534076946946904" type="table_bg" />
+                <action id="5" name="Set frame" sid="3780183363985665" type="btn_gameLeague">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Set text" sid="4087121312065007" type="txt_GameLeague">
+                    <param id="0" name="Text">&quot; Back&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="9912605683453361" type="txt_GameLeague_ext">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="5163338226121673" type="txt_UserName">
+                    <param id="0" name="Text">MyName</param>
+                </action>
+                <action id="20" name="Request room list" sid="6168448060587243" type="Multiplayer">
+                    <param id="0" name="Game">&quot;BrawlerStudios-BrawlConnect&quot;</param>
+                    <param id="1" name="Instance">GameType</param>
+                    <param id="2" name="Which">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="9131196446721768" type="System">
+                    <param id="0" name="Variable">roomListY</param>
+                    <param id="1" name="Value">480</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7176281025175504">
+            <conditions>
+                <condition id="21" name="On room list" sid="9387778167966469" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="7615867163485058" type="txt_BrawlConnect">
+                    <param id="0" name="Instance variable">table_bgColor</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-6" name="Set height" sid="9995915331807139" type="scrollBG">
+                    <param id="0" name="Height">63*Multiplayer.ListRoomCount</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8591228202885288">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7829200867087168" type="System">
+                            <param id="0" name="First value">Multiplayer.ListRoomCount</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-10" name="For" sid="196127165888127" type="System">
+                            <param id="0" name="Name">&quot;roomList&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">Multiplayer.ListRoomCount-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="223790500578573" type="txt_BrawlConnect">
+                            <param id="0" name="Instance variable">table_bgColor</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1210188187359586" type="System">
+                            <param id="0" name="Object to create">table_bg</param>
+                            <param id="1" name="Layer">&quot;Menu&quot;</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">roomListY</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="2866676823805092" type="System">
+                            <param id="0" name="Variable">roomListY</param>
+                            <param id="1" name="Value">63</param>
+                        </action>
+                        <action id="0" name="Set text" sid="873192316993328" type="lable_room_name">
+                            <param id="0" name="Text">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6861601946563959" type="lable_room_players">
+                            <param id="0" name="Text">Multiplayer.ListRoomPeerCount(loopindex)&amp;&quot; / &quot;&amp;Multiplayer.ListRoomMaxPeerCount(loopindex)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8048866275168461" type="lable_room_name">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Value">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2122326325497129" type="lable_room_players">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Value">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7192461365998204" type="icon_custom">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Value">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4002568109360152" type="icon_damage">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Value">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2506617772010068" type="icon_handicap">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Value">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2278471815471654" type="icon_league">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Value">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5419253877420672" type="icon_limit">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Value">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4486500015429836" type="icon_private">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Value">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4249484358761084" type="icon_rules">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Value">Multiplayer.ListRoomName(loopindex)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="7883999027695612" type="icon_custom">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">tokenat(AJAX.LastData,5,&quot;,&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="68083319475438" type="icon_damage">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">tokenat(AJAX.LastData,7,&quot;,&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="1272090646742688" type="icon_handicap">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">tokenat(AJAX.LastData,6,&quot;,&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="5781961110767214" type="icon_league">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">tokenat(AJAX.LastData,2,&quot;,&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="970990596532368" type="icon_rules">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">tokenat(AJAX.LastData,3,&quot;,&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="8836019642534719" type="icon_limit">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">int(tokenat(AJAX.LastData,4,&quot;,&quot;))</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="5150325094569575" type="icon_private">
+                            <param id="0" name="Instance variable">value</param>
+                            <param id="1" name="Value">int(tokenat(AJAX.LastData,9,&quot;,&quot;))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9883731621747892">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9875742597661851" type="txt_BrawlConnect">
+                                    <param id="0" name="Instance variable">table_bgColor</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="7952252452806658" type="table_bg">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4381873500512353">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9197528523134652" type="txt_BrawlConnect">
+                                    <param id="0" name="Instance variable">table_bgColor</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="9052024605509802" type="table_bg">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7357631913166441">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7478939755918494" type="System">
+                                    <param id="0" name="First value">loopindex</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="8844825425081163" type="scrollBG">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2416764384292318">
+            <conditions>
+                <condition id="0" name="On completed" sid="7760305994856514" type="AJAX">
+                    <param id="0" name="Tag">&quot;rr&quot;</param>
+                </condition>
+                <condition id="-19" name="Pick all" sid="2718194482158308" type="System">
+                    <param id="0" name="Object">lable_room_name</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="1398243111544916" type="lable_room_name">
+                    <param id="0" name="Instance variable">seed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">tokenat(AJAX.LastData,0,&quot;,&quot;)</param>
+                </condition>
+                <condition id="-19" name="Pick all" sid="3559852786340239" type="System">
+                    <param id="0" name="Object">icon_custom</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3599367442178386" type="icon_custom">
+                    <param id="0" name="Instance variable">seed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">tokenat(AJAX.LastData,0,&quot;,&quot;)</param>
+                </condition>
+                <condition id="-19" name="Pick all" sid="5915711101991574" type="System">
+                    <param id="0" name="Object">icon_damage</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3035453928157139" type="icon_damage">
+                    <param id="0" name="Instance variable">seed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">tokenat(AJAX.LastData,0,&quot;,&quot;)</param>
+                </condition>
+                <condition id="-19" name="Pick all" sid="9778987017875272" type="System">
+                    <param id="0" name="Object">icon_handicap</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3384721164742081" type="icon_handicap">
+                    <param id="0" name="Instance variable">seed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">tokenat(AJAX.LastData,0,&quot;,&quot;)</param>
+                </condition>
+                <condition id="-19" name="Pick all" sid="9972554733232709" type="System">
+                    <param id="0" name="Object">icon_league</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="981934244888776" type="icon_league">
+                    <param id="0" name="Instance variable">seed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">tokenat(AJAX.LastData,0,&quot;,&quot;)</param>
+                </condition>
+                <condition id="-19" name="Pick all" sid="1412815317199459" type="System">
+                    <param id="0" name="Object">icon_limit</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="3934430645959873" type="icon_limit">
+                    <param id="0" name="Instance variable">seed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">tokenat(AJAX.LastData,0,&quot;,&quot;)</param>
+                </condition>
+                <condition id="-19" name="Pick all" sid="7476126535616939" type="System">
+                    <param id="0" name="Object">icon_private</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2060493849273007" type="icon_private">
+                    <param id="0" name="Instance variable">seed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">tokenat(AJAX.LastData,0,&quot;,&quot;)</param>
+                </condition>
+                <condition id="-19" name="Pick all" sid="1882903564967137" type="System">
+                    <param id="0" name="Object">icon_rules</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="8690885184548666" type="icon_rules">
+                    <param id="0" name="Instance variable">seed</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">tokenat(AJAX.LastData,0,&quot;,&quot;)</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="5738957485067214">
+            <conditions>
+                <condition id="-18" name="On created" sid="8049196346887747" type="table_bg" />
+            </conditions>
+            <actions>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1018052697203494" type="table_bg">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5196170148170363">
+            <conditions>
+                <condition id="-18" name="On created" sid="9547014720668813" type="lable_room_name" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="7932337499456673" type="lable_room_name">
+                    <param id="0" name="X">16</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="4007997978864016" type="lable_room_name">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8256440176463777">
+            <conditions>
+                <condition id="-18" name="On created" sid="3177811398157481" type="lable_room_players" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="378132012154583" type="lable_room_players">
+                    <param id="0" name="X">563</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="9254524836936485" type="lable_room_players">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4620690642852099">
+            <conditions>
+                <condition id="-18" name="On created" sid="6433975454616863" type="icon_league" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="4062988927989156" type="icon_league">
+                    <param id="0" name="X">232</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="9145128903052728" type="icon_league">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8151044328096999">
+            <conditions>
+                <condition id="-18" name="On created" sid="1508351415968972" type="icon_rules" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="9480181808705744" type="icon_rules">
+                    <param id="0" name="X">280</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="4675598862763104" type="icon_rules">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6802749958437046">
+            <conditions>
+                <condition id="-18" name="On created" sid="7030464640420357" type="icon_limit" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="3387011863843344" type="icon_limit">
+                    <param id="0" name="X">328</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="4227532161740541" type="icon_limit">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7650006277074152">
+            <conditions>
+                <condition id="-18" name="On created" sid="9221598246500536" type="icon_custom" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="5432673482786202" type="icon_custom">
+                    <param id="0" name="X">376</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="4893268094771011" type="icon_custom">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4644415966930639">
+            <conditions>
+                <condition id="-18" name="On created" sid="4435016644638088" type="icon_handicap" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="6724204946793332" type="icon_handicap">
+                    <param id="0" name="X">424</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="3039621695729855" type="icon_handicap">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8991660318817882">
+            <conditions>
+                <condition id="-18" name="On created" sid="9493093663856479" type="icon_damage" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="746097498358281" type="icon_damage">
+                    <param id="0" name="X">472</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="1759349249107025" type="icon_damage">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8071340271201575">
+            <conditions>
+                <condition id="-18" name="On created" sid="7030009433395492" type="icon_private" />
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="853395484890941" type="icon_private">
+                    <param id="0" name="X">520</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="7404364792262558" type="icon_private">
+                    <param id="0" name="Pin to">scrollBG</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4210039922354264">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9003205029848532" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7043782402945648">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="6238010180595566" type="scrollBG" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3332191050312571">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="6622161037485734" type="scrollBG">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">480</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="7489120384864632" type="scrollBG">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">480</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5129729669088485">
+                            <conditions />
+                            <actions>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="8030823404687224" type="scrollBG">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">1031-(scrollBG.Height)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1920003053323614">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="2168094709361162" type="scrollBG">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">490</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="5021872207893947" type="scrollBG">
+                            <param id="0" name="Y">490</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="865717252548135">
+                    <conditions>
+                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="5259677632199157" type="scrollBG" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="6763550423109941" type="scrollBG">
+                            <param id="0" name="Y">1001-(scrollBG.Height)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2536699418220823">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="4339360331831234" type="Touch">
+                            <param id="0" name="Object">lable_room_name</param>
+                        </condition>
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="2009876400111266" type="scrollBG" />
+                        <condition id="-19" name="Pick all" sid="7777063436005202" type="System">
+                            <param id="0" name="Object">icon_custom</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6308613807781628" type="icon_custom">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">lable_room_name.seed</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="5898893564331316" type="System">
+                            <param id="0" name="Object">icon_damage</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1411210125623103" type="icon_damage">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">lable_room_name.seed</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="7965661770650464" type="System">
+                            <param id="0" name="Object">icon_handicap</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4150610283750445" type="icon_handicap">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">lable_room_name.seed</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="2985678964551302" type="System">
+                            <param id="0" name="Object">icon_league</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5261426593448948" type="icon_league">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">lable_room_name.seed</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="832356406362654" type="System">
+                            <param id="0" name="Object">icon_limit</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6553423778984085" type="icon_limit">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">lable_room_name.seed</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="3658370266796107" type="System">
+                            <param id="0" name="Object">icon_private</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4270249875008844" type="icon_private">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">lable_room_name.seed</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="6177228057700734" type="System">
+                            <param id="0" name="Object">icon_rules</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="304025710991669" type="icon_rules">
+                            <param id="0" name="Instance variable">seed</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">lable_room_name.seed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="603701435407032" type="System">
+                            <param id="0" name="Variable">roomName</param>
+                            <param id="1" name="Value">lable_room_name.text</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1040346265522606" type="System">
+                            <param id="0" name="Variable">room_seed</param>
+                            <param id="1" name="Value">lable_room_name.seed</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9412266748998047" type="System">
+                            <param id="0" name="Variable">room_custom</param>
+                            <param id="1" name="Value">icon_custom.value</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3324057958053205" type="System">
+                            <param id="0" name="Variable">room_damage</param>
+                            <param id="1" name="Value">icon_damage.value</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4599550189073566" type="System">
+                            <param id="0" name="Variable">room_handicap</param>
+                            <param id="1" name="Value">icon_handicap.value</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9467776912623481" type="System">
+                            <param id="0" name="Variable">room_league</param>
+                            <param id="1" name="Value">icon_league.value</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5894835527062681" type="System">
+                            <param id="0" name="Variable">room_limit</param>
+                            <param id="1" name="Value">icon_limit.value</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6310067502917367" type="System">
+                            <param id="0" name="Variable">room_private</param>
+                            <param id="1" name="Value">icon_private.value</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3115317235238506" type="System">
+                            <param id="0" name="Variable">room_rules</param>
+                            <param id="1" name="Value">icon_rules.value</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7734723318585602" type="System">
+                            <param id="0" name="Variable">enterdRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Leave room" sid="573651544591268" type="Multiplayer" />
+                        <action id="-9" name="Set value" sid="5331092510088574" type="System">
+                            <param id="0" name="Variable">leaveRoom</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3612246304001547">
+                            <conditions>
+                                <condition id="9" inverted="1" name="Is in room" sid="1685469891905692" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="8904641897200707" type="System">
+                                    <param id="0" name="Layout">&quot;GameRoom&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="1636407952197162">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6355716428485759" type="Touch">
+                    <param id="0" name="Object">txt_GameLeague</param>
+                </condition>
+                <condition id="17" name="On tap object" sid="8465145707742354" type="Touch">
+                    <param id="0" name="Object">btn_gameLeague</param>
+                </condition>
+                <condition id="17" name="On back button" sid="2719644214206246" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6170224021538778" type="System">
+                    <param id="0" name="Variable">roomListY</param>
+                    <param id="1" name="Value">480</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="246214012012222" type="System">
+                    <param id="0" name="Layout">Main_Matches_gate</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8207286893462946">
+            <conditions>
+                <condition id="6" name="On left room" sid="9233225579903517" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="5235029949685135" type="System">
+                    <param id="0" name="Layout">&quot;GameRoom&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

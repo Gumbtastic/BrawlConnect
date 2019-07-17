@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PreloadEvents</name>
+    <events>
+        <include>commonEvents</include>
+        <event-block sid="8907851869221499">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9638215582481302" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9061257058494717" type="System">
+                    <param id="0" name="Variable">authCD</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="388326128180227">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="985351181840515" type="System">
+                    <param id="0" name="Variable">authCD</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="7671579254878796" type="System">
+                    <param id="0" name="Variable">authCD</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5224493866409714">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1387764216116138" type="System">
+                    <param id="0" name="Variable">authCD</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5228757273278086" type="System">
+                    <param id="0" name="Variable">MyName</param>
+                    <param id="1" name="Value">choose(&quot;Villager&quot;,&quot;Bowser&quot;,&quot;Bowser Jr.&quot;,&quot;Captain Falcon&quot;,&quot;Rosalina&quot;,&quot;Robin&quot;,&quot;Dark Pit&quot;,&quot;Diddy Kong&quot;,&quot;Donkey Kong&quot;,&quot;Dr. Mario&quot;,&quot;Duck Hunt&quot;,&quot;Falco&quot;,&quot;Fox&quot;,&quot;Mr. Game &amp; Watch&quot;,&quot;Ganondorf&quot;,&quot;Charizard&quot;,&quot;Ike&quot;,&quot;King Dedede&quot;,&quot;Kirby&quot;,&quot;Link&quot;,&quot;Little Mac&quot;,&quot;Lucario&quot;,&quot;Lucina&quot;,&quot;Luigi&quot;,&quot;Mario&quot;,&quot;Marth&quot;,&quot;Mega Man&quot;,&quot;Meta Knight&quot;,&quot;Mii Brawler&quot;,&quot;Mii Gunner&quot;,&quot;Mii Swordfighter&quot;,&quot;Ness&quot;,&quot;Pac-Man&quot;,&quot;Palutena&quot;,&quot;Peach&quot;,&quot;Pikachu&quot;,&quot;Olimar&quot;,&quot;Pit&quot;,&quot;Jigglypuff&quot;,&quot;Greninja&quot;,&quot;R.O.B.&quot;,&quot;Samus&quot;,&quot;Sheik&quot;,&quot;Shulk&quot;,&quot;Sonic&quot;,&quot;Toon Link&quot;,&quot;Wario&quot;,&quot;Wii Fit Trainer&quot;,&quot;Yoshi,Zelda&quot;,&quot;Zero Suit Samus&quot;)</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="138039261419457" type="System">
+                    <param id="0" name="Layout">Main_Matches</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="5201873937038477">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6506508049614699" type="System">
+                    <param id="0" name="Variable">authCD</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="8361395880154012" type="System">
+                    <param id="0" name="Variable">authTrigger</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="3138751083136186">
+                    <conditions>
+                        <condition id="3" name="Local key exists" sid="5327554562682626" type="WebStorage">
+                            <param id="0" name="Key">&quot;myname&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="96312606632302" type="System">
+                            <param id="0" name="Variable">authTrigger</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1730336908525715" type="System">
+                            <param id="0" name="Variable">MyName</param>
+                            <param id="1" name="Value">WebStorage.LocalValue(&quot;myname&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6775523839029723" type="System">
+                            <param id="0" name="Variable">MyEmail</param>
+                            <param id="1" name="Value">WebStorage.LocalValue(&quot;mymail&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3764832988139942" type="System">
+                            <param id="0" name="Variable">MyPassword</param>
+                            <param id="1" name="Value">WebStorage.LocalValue(&quot;mypassword&quot;)</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="7648398629464262" type="AJAX">
+                            <param id="0" name="Tag">&quot;auth&quot;</param>
+                            <param id="1" name="URL">&quot;http://brawlconnect.com/includes/pa.php?m=&quot; &amp; MyEmail</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6589356643050877" type="System">
+                            <param id="0" name="Variable">authCD</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2727773262522176" type="txt_preload">
+                            <param id="0" name="Text">&quot;logging you in&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="7920350156709228">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Local key exists" sid="3356170585366601" type="WebStorage">
+                            <param id="0" name="Key">&quot;myname&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="8474812461713831" type="System">
+                            <param id="0" name="Layout">login</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="380942504094407">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6221111059625475" type="System">
+                            <param id="0" name="Variable">authTrigger</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="8929219661433586" type="System">
+                            <param id="0" name="Layout">login</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="7384601998998914">
+            <conditions>
+                <condition id="0" name="On completed" sid="9202267618822388" type="AJAX">
+                    <param id="0" name="Tag">&quot;auth&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="9768240305621548" type="System">
+                    <param id="0" name="First value">AJAX.LastData</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9263225205364952" type="System">
+                    <param id="0" name="Variable">MyName</param>
+                    <param id="1" name="Value">right(AJAX.LastData,len(AJAX.LastData)-128)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="270234452540017">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3422511509962689" type="System">
+                            <param id="0" name="First value">CBHash.SHA256(MyPassword&amp;mid(AJAX.LastData,64,64))</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">left(AJAX.LastData,64)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="1456450451639989" type="WebStorage">
+                            <param id="0" name="Key">&quot;mymail&quot;</param>
+                            <param id="1" name="Value">MyEmail</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="434514522173289" type="WebStorage">
+                            <param id="0" name="Key">&quot;mypassword&quot;</param>
+                            <param id="1" name="Value">MyPassword</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="6963308518204764" type="WebStorage">
+                            <param id="0" name="Key">&quot;myname&quot;</param>
+                            <param id="1" name="Value">MyName</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="7570108404853609" type="System">
+                            <param id="0" name="Layout">Main_Matches</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="6781920478906343">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5804069754509671" type="System">
+                            <param id="0" name="First value">CBHash.SHA256(MyPassword&amp;right(AJAX.LastData,64))</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">left(AJAX.LastData,64)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="278282314992058" type="System">
+                            <param id="0" name="Layout">login</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

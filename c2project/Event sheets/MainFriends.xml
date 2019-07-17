@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainFriends</name>
+    <events>
+        <include>debugEvenst</include>
+        <include>commonEvents</include>
+        <event-block sid="4898052369550309">
+            <conditions>
+                <condition id="17" name="On back button" sid="7386510849012246" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="9797078689025945" type="Function">
+                    <param id="0" name="Name">&quot;backBtn_leave&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1727279830418318">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3751738478834513" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

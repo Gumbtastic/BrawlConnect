@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LoginEvents</name>
+    <events>
+        <include>debugEvenst</include>
+        <include>commonEvents</include>
+        <event-block sid="3294704351396735">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9269122853603408" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="6499045870334411" type="btn_gameLeague" />
+                <action id="-9" name="Destroy" sid="6954391355812833" type="txt_GameLeague" />
+                <action id="-9" name="Destroy" sid="8003654129945612" type="txt_GameLeague_ext" />
+            </actions>
+            <sub-events>
+                <event-block sid="9195585603030007">
+                    <conditions>
+                        <condition id="3" name="Local key exists" sid="3172138767617698" type="WebStorage">
+                            <param id="0" name="Key">&quot;mymail&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5873080096482995" type="input_usermail">
+                            <param id="0" name="Text">WebStorage.LocalValue(&quot;mymail&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5528673485617367">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8815404594142216" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9995775648666734">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="4116399760337294" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn1</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="9075387712107842" type="input_usermail">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="6726901149319979" type="input_password">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="338774410621889" type="System">
+                            <param id="0" name="Variable">MyEmail</param>
+                            <param id="1" name="Value">input_usermail.Text</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6097228998904902" type="System">
+                            <param id="0" name="Variable">MyPassword</param>
+                            <param id="1" name="Value">CBHash.SHA256(input_password.Text)</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="4165575124897035" type="AJAX">
+                            <param id="0" name="Tag">&quot;auth&quot;</param>
+                            <param id="1" name="URL">&quot;http://brawlconnect.com/includes/pa.php?m=&quot; &amp; MyEmail</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1307933105027254" type="System">
+                            <param id="0" name="Variable">authCD</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6460180349205021">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="4875404571264812" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="153024053231715" type="System">
+                            <param id="0" name="Layout">register</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="241273059314039">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="310284845396281" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="137769259209785" type="System">
+                            <param id="0" name="Variable">MyName</param>
+                            <param id="1" name="Value">&quot;Guest&quot;&amp;random(10,99)</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="136204057827776" type="WebStorage">
+                            <param id="0" name="Key">&quot;myname&quot;</param>
+                            <param id="1" name="Value">MyName</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="786440207671797" type="System">
+                            <param id="0" name="Layout">Main_Matches</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7505378803565516">
+                    <conditions>
+                        <condition id="1" name="On text changed" sid="4282095690542821" type="input_txtBox" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set CSS style" sid="9112167387413774" type="input_txtBox">
+                            <param id="0" name="Property name">&quot;border&quot;</param>
+                            <param id="1" name="Value">&quot;0&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="2102219639213158" type="input_txtBox">
+                            <param id="0" name="Property name">&quot;border-bottom&quot;</param>
+                            <param id="1" name="Value">&quot;1px solid #ccc&quot;</param>
+                        </action>
+                        <action id="1" name="Set placeholder" sid="9942036645171736" type="input_password">
+                            <param id="0" name="Placeholder">&quot;Password&quot;</param>
+                        </action>
+                        <action id="1" name="Set placeholder" sid="7997803196984025" type="input_usermail">
+                            <param id="0" name="Placeholder">&quot;Your E-Mail&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4557712648423144">
+            <conditions>
+                <condition id="0" name="On completed" sid="9824880864361239" type="AJAX">
+                    <param id="0" name="Tag">&quot;auth&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="2755864134579277" type="System">
+                    <param id="0" name="First value">AJAX.LastData</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9438931671756818" type="System">
+                    <param id="0" name="Variable">MyName</param>
+                    <param id="1" name="Value">right(AJAX.LastData,len(AJAX.LastData)-128)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5157041188003002">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1679340708829286" type="System">
+                            <param id="0" name="First value">CBHash.SHA256(MyPassword&amp;mid(AJAX.LastData,64,64))</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">left(AJAX.LastData,64)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="318725186046211" type="WebStorage">
+                            <param id="0" name="Key">&quot;mymail&quot;</param>
+                            <param id="1" name="Value">MyEmail</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="1914805911863381" type="WebStorage">
+                            <param id="0" name="Key">&quot;mypassword&quot;</param>
+                            <param id="1" name="Value">MyPassword</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="9011024218112056" type="WebStorage">
+                            <param id="0" name="Key">&quot;myname&quot;</param>
+                            <param id="1" name="Value">MyName</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="1176325543608688" type="System">
+                            <param id="0" name="Layout">Main_Matches</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="167193275478648">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9163257470441809" type="System">
+                            <param id="0" name="First value">CBHash.SHA256(MyPassword&amp;right(AJAX.LastData,64))</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">left(AJAX.LastData,64)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set CSS style" sid="6962863693876517" type="input_usermail">
+                            <param id="0" name="Property name">&quot;border&quot;</param>
+                            <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="3335294570069239" type="input_password">
+                            <param id="0" name="Property name">&quot;border&quot;</param>
+                            <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5852981083016099" type="input_password">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9040450361839919" type="input_usermail">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1973499412541599">
+            <conditions>
+                <condition id="0" name="On completed" sid="6445302083813241" type="AJAX">
+                    <param id="0" name="Tag">&quot;auth&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="6705569839284232" type="System">
+                    <param id="0" name="First value">AJAX.LastData</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set CSS style" sid="9888001199441471" type="input_usermail">
+                    <param id="0" name="Property name">&quot;border&quot;</param>
+                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="1380870697734039" type="input_password">
+                    <param id="0" name="Property name">&quot;border&quot;</param>
+                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="4203864715481546" type="input_password">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="7809946915332946" type="input_usermail">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

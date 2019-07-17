@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMatchesGate</name>
+    <events>
+        <include>debugEvenst</include>
+        <include>commonEvents</include>
+        <event-block sid="2332310759646293">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2218927708617372" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="1842667629374574" type="btn_gameLeague">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Set text" sid="8145920466195555" type="txt_GameLeague">
+                    <param id="0" name="Text">&quot; Back&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="4283576302736885" type="txt_GameLeague_ext">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3011893080318421">
+            <conditions>
+                <condition id="0" name="Compare text" sid="4318852176512119" type="txt_UserName">
+                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="4464739835969028" type="txt_UserName">
+                    <param id="0" name="Text">MyName</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6641141488929426">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1219710356024966" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4093834652672651">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="8157908840911931" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5891334720418508" type="System">
+                            <param id="0" name="Layout">Main_Matches_join</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8428369021008149">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="6083282814999361" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="2488899354575629" type="System">
+                            <param id="0" name="Layout">openGameRoom</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3731181630489605">
+                            <conditions>
+                                <condition id="9" inverted="1" name="Is in room" sid="2220816528191729" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="7873937020031788" type="System">
+                                    <param id="0" name="Layout">&quot;GameRoom&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="952451591237706">
+            <conditions>
+                <condition id="17" name="On tap object" sid="3878742774404018" type="Touch">
+                    <param id="0" name="Object">txt_GameLeague</param>
+                </condition>
+                <condition id="17" name="On tap object" sid="1361626782807467" type="Touch">
+                    <param id="0" name="Object">btn_gameLeague</param>
+                </condition>
+                <condition id="17" name="On back button" sid="334377531433216" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3364554286724605" type="System">
+                    <param id="0" name="Layout">Main_Matches</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

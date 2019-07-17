@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>registerEvents</name>
+    <events>
+        <variable constant="0" name="authStat" sid="5009530123410956" static="0" type="number">0</variable>
+        <include>debugEvenst</include>
+        <include>commonEvents</include>
+        <event-block sid="6771744322226523">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5309790176490274" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9787540392338309" type="System">
+                    <param id="0" name="Variable">salt</param>
+                    <param id="1" name="Value">CBHash.SHA256(choose(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;)&amp;choose(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;)&amp;choose(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;)&amp;choose(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;)&amp;choose(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;)&amp;choose(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;)&amp;choose(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;)&amp;choose(&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;,&quot;e&quot;,&quot;f&quot;,&quot;g&quot;,&quot;h&quot;,&quot;i&quot;,&quot;j&quot;,&quot;k&quot;,&quot;l&quot;,&quot;m&quot;,&quot;n&quot;,&quot;o&quot;,&quot;p&quot;,&quot;q&quot;,&quot;r&quot;,&quot;s&quot;,&quot;t&quot;,&quot;u&quot;,&quot;v&quot;,&quot;w&quot;,&quot;x&quot;,&quot;y&quot;,&quot;z&quot;,&quot;A&quot;,&quot;B&quot;,&quot;C&quot;,&quot;D&quot;,&quot;E&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;I&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;M&quot;,&quot;N&quot;,&quot;O&quot;,&quot;P&quot;,&quot;Q&quot;,&quot;R&quot;,&quot;S&quot;,&quot;T&quot;,&quot;U&quot;,&quot;V&quot;,&quot;W&quot;,&quot;X&quot;,&quot;Y&quot;,&quot;Z&quot;,&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;,&quot;6&quot;,&quot;7&quot;,&quot;8&quot;,&quot;9&quot;))</param>
+                </action>
+                <action id="6" name="Set focused" sid="9910640228630593" type="input_username" />
+                <action id="5" name="Set frame" sid="4172550092634543" type="btn_gameLeague">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Set text" sid="9910793275021649" type="txt_GameLeague">
+                    <param id="0" name="Text">&quot; Back&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="2816741734754572" type="txt_GameLeague_ext">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1742613901504271">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8260834010550973" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2164701146492199">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="7467074852912444" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9270835213238654">
+                            <conditions>
+                                <condition id="0" inverted="1" name="Compare text" sid="4899796360446861" type="input_username">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="Compare text" sid="8258189460474713" type="input_usermail">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="Compare text" sid="8479471511971436" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" inverted="1" name="Compare text" sid="7089232006073973" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="0" name="Compare text" sid="8833866303782793" type="input_password_check">
+                                    <param id="0" name="Text">input_password.Text</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="8563797800155433" type="System">
+                                    <param id="0" name="First value">len(input_password.Text)</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">8</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="777235184202879" type="System">
+                                    <param id="0" name="First value">RegexMatchCount(input_username.Text, &quot;^[a-zA-Z0-9]*$&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="8549459439313843" type="System">
+                                    <param id="0" name="First value">RegexMatchCount(input_usermail.Text, &quot;[a-z0-9!#$%&amp;&apos;*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;&apos;*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="6761040551615491" type="System">
+                                    <param id="0" name="First value">RegexMatchCount(input_password.Text, &quot;^[a-zA-Z0-9_.!§$%&amp;/()=?*#]*$&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="1810541669513503" type="btn_checkbox">
+                                    <param id="0" name="Instance variable">checked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3369666020695671" type="System">
+                                    <param id="0" name="Variable">MyEmail</param>
+                                    <param id="1" name="Value">input_usermail.Text</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8573132626680224" type="System">
+                                    <param id="0" name="Variable">MyName</param>
+                                    <param id="1" name="Value">input_username.Text</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1955909717221101" type="System">
+                                    <param id="0" name="Variable">MyPassword</param>
+                                    <param id="1" name="Value">CBHash.SHA256(input_password.Text)</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="8447851206324724" type="AJAX">
+                                    <param id="0" name="Tag">&quot;cruser&quot;</param>
+                                    <param id="1" name="URL">&quot;http://brawlconnect.com/includes/regus.php?u=&quot; &amp; MyName &amp; &quot;&amp;p=&quot; &amp; CBHash.SHA256(MyPassword &amp; salt) &amp; &quot;&amp;m=&quot; &amp; MyEmail &amp; &quot;&amp;s=&quot; &amp; salt</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8236778300863342" type="System">
+                                    <param id="0" name="Variable">authCD</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3124912693372583" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3512723647737121">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5201338774996832" type="btn_checkbox">
+                                    <param id="0" name="Instance variable">checked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="7327269850502274" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="1491117907880323" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="2881099731426886" type="txt_paragraph">
+                                    <param id="0" name="Color">rgb(217, 37, 32)</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9964541007160395" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="997810786515336" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="4944695538278498" type="input_password">
+                                    <param id="0" name="Placeholder">&quot;your password is invalid&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7561418444485865" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="8945783744175307">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4422490383532813" type="System">
+                                    <param id="0" name="First value">RegexMatchCount(input_password.Text, &quot;^[a-zA-Z0-9_.!§$%&amp;/()=?*#]*$&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="6025566553798502" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="9097171423208066" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2713379283005789" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5843144093209838" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="6606104364033222" type="input_password">
+                                    <param id="0" name="Placeholder">&quot;your password is invalid&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5621297137708887" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3740859391022697">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2144383908599383" type="System">
+                                    <param id="0" name="First value">RegexMatchCount(input_usermail.Text, &quot;[a-z0-9!#$%&amp;&apos;*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;&apos;*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="6412084499448829" type="input_usermail">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="544763977048839" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="4911337392602463" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7795690174402988" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6108703187682715" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8457736924158743" type="input_usermail">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="4285639540891349" type="input_usermail">
+                                    <param id="0" name="Placeholder">&quot;you enterd an invalid e-mail address&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5125627162091164" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2650172034069806">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="756894700755676" type="System">
+                                    <param id="0" name="First value">RegexMatchCount(input_username.Text, &quot;^[a-zA-Z0-9]*$&quot;,&quot;&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="896904117643535" type="input_username">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="6765956961648407" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="1241422986375266" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7169435951428668" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5870747735934806" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="2192106185589128" type="input_username">
+                                    <param id="0" name="Placeholder">&quot;your username can only have letters and numbers&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5132855165512716" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7161458730928576">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5298817025194548" type="System">
+                                    <param id="0" name="First value">input_password.Text</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">input_password_check.Text</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="7528096462375859" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="361189652913373" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2999808570110984" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="1592271029127149" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="7962904366568352" type="input_password">
+                                    <param id="0" name="Placeholder">&quot;your passwords do not match&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6743092419302558" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4809235834986089">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8803497089220495" type="System">
+                                    <param id="0" name="First value">len(input_password.Text)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="6946643768587073" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="100876208387447" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2100910340831327" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3474409673083099" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="4795960457244282" type="input_password">
+                                    <param id="0" name="Placeholder">&quot;your password has to be 8 characters long&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9451676918558283" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7591221196804396">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="8808810049280168" type="input_username">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="691906509222113" type="input_username">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="6626222113198665" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="3131996549925489" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4052552917171334" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2867595261268947" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="8239384059724346" type="input_username">
+                                    <param id="0" name="Placeholder">&quot;please please enter your username&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2062578190073046" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3278019879223622">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="7992647057351692" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="9000719907969582" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="9717941283030946" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="9225169573288438" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="8807095021319967" type="input_password">
+                                    <param id="0" name="Placeholder">&quot;please re-type your password&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4693140945970515" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6627971134562429">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="3144821844139991" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="1925477267720497" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="4409900676856794" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="18762702192397" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="9742751035647637" type="input_password">
+                                    <param id="0" name="Placeholder">&quot;please enter a password&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4015958814814832" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4598965515614475">
+                            <conditions>
+                                <condition id="0" name="Compare text" sid="8196407173931694" type="input_usermail">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="4646550832938715" type="input_usermail">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="2789397742222015" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="5265777564512492" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;2px solid #d92520&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="785928475880998" type="input_password">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="911241869619364" type="input_password_check">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="5157532503271916" type="input_usermail">
+                                    <param id="0" name="Placeholder">&quot;please enter your e-mail address&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3154114084987987" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1169882609805081">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="6692997786906518" type="Touch">
+                            <param id="0" name="Object">btn_checkbox</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="6203841041273954" type="btn_checkbox">
+                            <param id="0" name="Instance variable">checked</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3598834210046985">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="8676792260999059" type="btn_checkbox">
+                                    <param id="0" name="Instance variable">checked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="4708478362941024" type="btn_checkbox">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4154790845655024">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3142082886695361" type="btn_checkbox">
+                                    <param id="0" name="Instance variable">checked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="702891415901385" type="btn_checkbox">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1234359720635569">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8836192530442217" type="System">
+                            <param id="0" name="Variable">authStat</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="4036965476578806">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="6584671555838118" type="input_password" />
+                                <condition id="2" name="On clicked" sid="1573834361280159" type="input_password_check" />
+                                <condition id="2" name="On clicked" sid="9799146002686728" type="input_usermail" />
+                                <condition id="2" name="On clicked" sid="6525536899574507" type="input_username" />
+                                <condition id="17" name="On tap object" sid="3927265518356745" type="Touch">
+                                    <param id="0" name="Object">btn_checkbox</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set CSS style" sid="8704777313992593" type="input_password">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;0&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="7825198180868921" type="input_password_check">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;0&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="3282479471172018" type="input_usermail">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;0&quot;</param>
+                                </action>
+                                <action id="7" name="Set CSS style" sid="6606759184662357" type="input_username">
+                                    <param id="0" name="Property name">&quot;border&quot;</param>
+                                    <param id="1" name="Value">&quot;0&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="4884443355533538" type="input_password">
+                                    <param id="0" name="Placeholder">&quot;Password&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="7801468854911399" type="input_password_check">
+                                    <param id="0" name="Placeholder">&quot;Re-Type Password&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="3799477772476592" type="input_usermail">
+                                    <param id="0" name="Placeholder">&quot;Your E-Mail&quot;</param>
+                                </action>
+                                <action id="1" name="Set placeholder" sid="3139892185675225" type="input_username">
+                                    <param id="0" name="Placeholder">&quot;Your Name&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1172518946356935" type="System">
+                                    <param id="0" name="Variable">authStat</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set font color" sid="4060028479205571" type="txt_paragraph">
+                                    <param id="0" name="Color">rgb(65, 65, 65)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="1271870440905563">
+            <conditions>
+                <condition id="17" name="On tap object" sid="3062052770950285" type="Touch">
+                    <param id="0" name="Object">txt_GameLeague</param>
+                </condition>
+                <condition id="17" name="On tap object" sid="9587668777437324" type="Touch">
+                    <param id="0" name="Object">btn_gameLeague</param>
+                </condition>
+                <condition id="17" name="On back button" sid="4979996112708909" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5582176276310566" type="System">
+                    <param id="0" name="Layout">login</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5403496107649104">
+            <conditions>
+                <condition id="0" name="On completed" sid="1940830399148156" type="AJAX">
+                    <param id="0" name="Tag">&quot;cruser&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="8597459487801173" type="System">
+                    <param id="0" name="First value">AJAX.LastData</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;success&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="3293640326980474" type="AJAX">
+                    <param id="0" name="Tag">&quot;auth&quot;</param>
+                    <param id="1" name="URL">&quot;http://brawlconnect.com/includes/pa.php?m=&quot; &amp; MyEmail</param>
+                </action>
+                <action id="-9" name="Set value" sid="4919517746718333" type="System">
+                    <param id="0" name="Variable">authCD</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9361893984918767">
+            <conditions>
+                <condition id="0" name="On completed" sid="5826088185689086" type="AJAX">
+                    <param id="0" name="Tag">&quot;auth&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="7093954210105612" type="System">
+                    <param id="0" name="First value">AJAX.LastData</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9755277994920311" type="System">
+                    <param id="0" name="Variable">MyName</param>
+                    <param id="1" name="Value">right(AJAX.LastData,len(AJAX.LastData)-128)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="1473717118783489">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3832071879118633" type="System">
+                            <param id="0" name="First value">CBHash.SHA256(MyPassword&amp;mid(AJAX.LastData,64,64))</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">left(AJAX.LastData,64)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set local value" sid="7580277232588495" type="WebStorage">
+                            <param id="0" name="Key">&quot;mypassword&quot;</param>
+                            <param id="1" name="Value">MyPassword</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="2298847545458169" type="WebStorage">
+                            <param id="0" name="Key">&quot;mymail&quot;</param>
+                            <param id="1" name="Value">MyEmail</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="8764423477770777" type="WebStorage">
+                            <param id="0" name="Key">&quot;myname&quot;</param>
+                            <param id="1" name="Value">MyName</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="5800441916761206" type="System">
+                            <param id="0" name="Layout">Main_Matches</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3013793794544455">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9348881171986221" type="System">
+                            <param id="0" name="First value">CBHash.SHA256(MyPassword&amp;right(AJAX.LastData,64))</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">left(AJAX.LastData,64)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="282854086742646" type="System">
+                            <param id="0" name="Layout">login</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

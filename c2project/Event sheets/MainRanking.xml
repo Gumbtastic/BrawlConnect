@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainRanking</name>
+    <events>
+        <include>debugEvenst</include>
+        <include>commonEvents</include>
+        <event-block sid="827208779696901">
+            <conditions>
+                <condition id="17" name="On back button" sid="9181552587379444" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="6921662083609772" type="Function">
+                    <param id="0" name="Name">&quot;backBtn_leave&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2129602491979533">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1696647100834286" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

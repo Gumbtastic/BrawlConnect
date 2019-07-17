@@ -1,0 +1,1484 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameRoomEvents</name>
+    <events>
+        <include>commonEvents</include>
+        <event-group description="A function to easily add a log message to the chat log textarea." sid="2559339993511355" title="Chat log2">
+            <sub-events>
+                <event-block sid="7056081984259646">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2696438992386966" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8833575741447164" type="ChatLog">
+                            <param id="0" name="Text">Self.Text &amp; newline &amp; Function.Param(0)</param>
+                        </action>
+                        <action id="9" name="Scroll to bottom" sid="1553927161211108" type="ChatLog" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="2196402285050075" title="Chat Login">
+            <sub-events>
+                <event-block sid="1188620748211214">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="7243437462901901" type="System" />
+                        <condition id="-14" name="Compare variable" sid="4448880444709861" type="System">
+                            <param id="0" name="Variable">leaveRoom</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Set unfocused" sid="5983427246648554" type="ChatTextBox" />
+                        <action id="-9" name="Destroy" sid="3267538957207713" type="table_bg" />
+                        <action id="-9" name="Destroy" sid="102032330164756" type="debug" />
+                        <action id="0" name="Set text" sid="869720979686171" type="ChatLog">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="4013647697969222" type="btn_gameLeague">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8502807948160068" type="txt_GameLeague">
+                            <param id="0" name="Text">&quot; Back&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8885159354990875" type="txt_GameLeague_ext">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="2384366726377937" type="movers_sprite">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="7863334893323533" type="movers_txt">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8631116405174166" type="ChatLog">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="7067356671096561" type="lable_RoomName">
+                            <param id="0" name="Text">roomName</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5733051580649525">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9314566999830637" type="System">
+                                    <param id="0" name="Variable">room_league</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;1on1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Join room" sid="1084134151731835" type="Multiplayer">
+                                    <param id="0" name="Game">&quot;BrawlerStudios-BrawlConnect&quot;</param>
+                                    <param id="1" name="Instance">GameType</param>
+                                    <param id="2" name="Room">roomName</param>
+                                    <param id="3" name="Max peers">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="5406468577008962">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3499414077282177" type="txt_PlayerName">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="460371199092431" type="txt_PlayerName">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="1595729827190977" type="txt_PlayerName" />
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="4638798994701666">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6355825524491556" type="avatar_room">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="4512552112612267" type="avatar_room">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="7990119447084674" type="avatar_room" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="3044166630589215">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="2874751641540927" type="System">
+                                    <param id="0" name="Variable">room_league</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Team&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="2022278421051814" type="System">
+                                    <param id="0" name="Variable">room_league</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;FFA&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Join room" sid="1173864695480477" type="Multiplayer">
+                                    <param id="0" name="Game">&quot;BrawlerStudios-BrawlConnect&quot;</param>
+                                    <param id="1" name="Instance">GameType</param>
+                                    <param id="2" name="Room">roomName</param>
+                                    <param id="3" name="Max peers">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7225861658696034">
+                    <conditions>
+                        <condition id="5" name="On joined room" sid="4584871076557431" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set read-only" sid="1625894943791159" type="ChatTextBox">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5157125503866988">
+                            <conditions>
+                                <condition id="10" name="Is host" sid="8033510979097956" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="6889667758859478" type="System">
+                                    <param id="0" name="Group name">&quot;Host2&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4446688286301955">
+                                    <conditions>
+                                        <condition id="-15" name="Is group active" sid="8134285133431555" type="System">
+                                            <param id="0" name="Group name">&quot;Peer2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="2438865944180365" type="System">
+                                            <param id="0" name="Group name">&quot;Peer2&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7957130478538037">
+                            <conditions>
+                                <condition id="10" inverted="1" name="Is host" sid="335485371950514" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="978742210642206" type="System">
+                                    <param id="0" name="Group name">&quot;Peer2&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="964313862193033">
+                                    <conditions>
+                                        <condition id="-15" name="Is group active" sid="2738393432176227" type="System">
+                                            <param id="0" name="Group name">&quot;Host2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Set group active" sid="6375977226782826" type="System">
+                                            <param id="0" name="Group name">&quot;Host2&quot;</param>
+                                            <param id="1" name="State">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2977826798690211">
+                    <conditions>
+                        <condition id="6" name="On left room" sid="6036769438966374" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="5579182818413488" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Left the chat room&quot;</param>
+                        </action>
+                        <action id="4" name="Set enabled" sid="2317297627270347" type="ChatTextBox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="741441897089851">
+                    <conditions>
+                        <condition id="3" name="On disconnected" sid="5468648099295087" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2534156960886193" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Disconnected from signalling server&quot;</param>
+                        </action>
+                        <action id="4" name="Set enabled" sid="4909785067848506" type="ChatTextBox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5746900080329179">
+                    <conditions>
+                        <condition id="1" name="On error" sid="8098377770020596" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="582883934404642" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Signalling error: &quot; &amp; Multiplayer.ErrorMessage</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Events that are common to both the host and peers." sid="1717890741000506" title="Common">
+            <sub-events>
+                <event-block sid="7980718271659528">
+                    <conditions />
+                    <actions>
+                        <action id="7" name="Set CSS style" sid="1417420325856876" type="ChatTextBox">
+                            <param id="0" name="Property name">&quot;font-size&quot;</param>
+                            <param id="1" name="Value">&quot;14px&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="7779291264201811" type="ChatLog">
+                            <param id="0" name="Property name">&quot;font-size&quot;</param>
+                            <param id="1" name="Value">&quot;14px&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="5155970506245231" type="ChatLog">
+                            <param id="0" name="Property name">&quot;border&quot;</param>
+                            <param id="1" name="Value">&quot;0&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="8203516223002827" type="ChatLog">
+                            <param id="0" name="Property name">&quot;padding-bottom&quot;</param>
+                            <param id="1" name="Value">&quot;10px&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="3289469803549999" type="ChatLog">
+                            <param id="0" name="Property name">&quot;background-color&quot;</param>
+                            <param id="1" name="Value">&quot;transparent&quot;</param>
+                        </action>
+                        <action disabled="1" id="7" name="Set CSS style" sid="853292768156801" type="ChatLog">
+                            <param id="0" name="Property name">&quot;background-color&quot;</param>
+                            <param id="1" name="Value">&quot;#4a4a4a&quot;</param>
+                        </action>
+                        <action disabled="1" id="7" name="Set CSS style" sid="1565516730589889" type="ChatTextBox">
+                            <param id="0" name="Property name">&quot;background-color&quot;</param>
+                            <param id="1" name="Value">&quot;#cccccc&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2990428505239785">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1425556797263284" type="btn_menu">
+                            <param id="0" name="Instance variable">state</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9074670463009941">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="2793344338241392" type="ChatTextBox" />
+                                <condition id="-2" name="Compare Y" sid="5363350729235143" type="ChatTextBox">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">1000</param>
+                                </condition>
+                                <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="2583118116320183" type="ChatTextBox" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="10" name="Start" sid="4535166428243402" type="ChatLog">
+                                    <param id="0" name="Start Mode">0</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="5562808520210929" type="ChatTextBox">
+                                    <param id="0" name="X">ChatTextBox.X</param>
+                                    <param id="1" name="Y">ChatTextBox.Y-475</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="9531235090224258" type="btn_send">
+                                    <param id="0" name="X">btn_send.X</param>
+                                    <param id="1" name="Y">btn_send.Y-475</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="6674971062785295" type="scrollBG">
+                                    <param id="0" name="X">scrollBG.X</param>
+                                    <param id="1" name="Y">scrollBG.Y-304</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4596846880161808">
+                            <conditions>
+                                <condition id="14" name="On tap" sid="1921488964114145" type="Touch" />
+                                <condition id="4" inverted="1" name="Is touching object" sid="7453065229506293" type="Touch">
+                                    <param id="0" name="Object">ChatTextBox</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="2811985024511896" type="ChatTextBox">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">1000</param>
+                                </condition>
+                                <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="6936678477580706" type="ChatTextBox" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="6145462739640581" type="ChatLog">
+                                    <param id="0" name="Reverse mode">0</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="1094004367911542" type="ChatTextBox">
+                                    <param id="0" name="X">ChatTextBox.X</param>
+                                    <param id="1" name="Y">ChatTextBox.Y+475</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="1704360713886633" type="btn_send">
+                                    <param id="0" name="X">btn_send.X</param>
+                                    <param id="1" name="Y">btn_send.Y+475</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="2723204537948133" type="scrollBG">
+                                    <param id="0" name="X">scrollBG.X</param>
+                                    <param id="1" name="Y">scrollBG.Y+304</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2697806515940811">
+                            <conditions>
+                                <condition id="2" name="On clicked" sid="7023736757611255" type="ChatLog" />
+                                <condition id="-2" name="Compare Y" sid="6420606925765424" type="ChatTextBox">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">1000</param>
+                                </condition>
+                                <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="1696058225919327" type="ChatTextBox" />
+                            </conditions>
+                            <actions>
+                                <action behavior="LiteTween" id="11" name="Reverse" sid="4369868006123117" type="ChatLog">
+                                    <param id="0" name="Reverse mode">0</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="9642459093669318" type="ChatTextBox">
+                                    <param id="0" name="X">ChatTextBox.X</param>
+                                    <param id="1" name="Y">ChatTextBox.Y+475</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="4396657061088024" type="btn_send">
+                                    <param id="0" name="X">btn_send.X</param>
+                                    <param id="1" name="Y">btn_send.Y+475</param>
+                                </action>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="9441681294518951" type="scrollBG">
+                                    <param id="0" name="X">scrollBG.X</param>
+                                    <param id="1" name="Y">scrollBG.Y+304</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3493044987430235">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="2733087466002268" type="Touch">
+                                    <param id="0" name="Object">btn_rdy</param>
+                                </condition>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="416386201297447" type="tabBar">
+                                    <param id="0" name="Object">btn_bg_tabBar</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="8685135868514491" type="btn_rdy">
+                                    <param id="0" name="Instance variable">state</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9203980132199837">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="5466255883834194" type="btn_rdy">
+                                            <param id="0" name="Instance variable">state</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="837424262068827" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9930522830245011">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3269712319444291" type="btn_rdy">
+                                            <param id="0" name="Instance variable">state</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="4245105892665944" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">3</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="6395811464261117">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="9440783621606389" type="Touch">
+                            <param id="0" name="Object">txt_GameLeague</param>
+                        </condition>
+                        <condition id="17" name="On tap object" sid="8535667204212194" type="Touch">
+                            <param id="0" name="Object">btn_gameLeague</param>
+                        </condition>
+                        <condition id="17" name="On back button" sid="3948360850646212" type="Browser" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="6322699295385331" type="System">
+                            <param id="0" name="Variable">player1Alive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6950900622697311" type="System">
+                            <param id="0" name="Variable">player2alive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7939194248041555" type="System">
+                            <param id="0" name="Variable">player3alive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7777253238934191" type="System">
+                            <param id="0" name="Variable">player4alive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8966898526695015" type="System">
+                            <param id="0" name="Variable">leaveRoom</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2618346542652319">
+                            <conditions>
+                                <condition id="9" inverted="1" name="Is in room" sid="7495123441675032" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="3551831056034498" type="System">
+                                    <param id="0" name="Layout">Main_Matches_gate</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="9780151732830975" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7168247422683984">
+                            <conditions>
+                                <condition id="9" name="Is in room" sid="2033450865740902" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Leave room" sid="5236185358783386" type="Multiplayer" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2836891940631985">
+                    <conditions>
+                        <condition id="6" name="On left room" sid="129988351166303" type="Multiplayer" />
+                        <condition id="-14" name="Compare variable" sid="9055601382362973" type="System">
+                            <param id="0" name="Variable">leaveRoom</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-25" name="Go to layout (by name)" sid="1818689811605524" type="System">
+                            <param id="0" name="Layout">&quot;Main_Matches_gate&quot;</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="7933430092911271" type="System" />
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="7205944206276617">
+                    <conditions>
+                        <condition behavior="LiteTween" id="4" name="On tween end" sid="8766421637581687" type="ChatLog" />
+                        <condition behavior="LiteTween" id="6" name="On tween reverse end" sid="6273718464502991" type="ChatLog" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Scroll to bottom" sid="1779897271338116" type="ChatLog" />
+                    </actions>
+                </event-block>
+                <event-block sid="6226821541915848">
+                    <conditions>
+                        <condition id="11" name="On peer connected" sid="5876768870491098" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8132995532696301" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;&apos;&quot; &amp; Multiplayer.PeerAlias &amp; &quot;&apos; joined&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3645742830477446">
+                    <conditions>
+                        <condition id="13" name="On peer disconnected" sid="2388523816790472" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6956334044883338" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;&apos;&quot; &amp; Multiplayer.PeerAlias &amp; &quot;&apos; left&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6942755641931421">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9220039026379257" type="System">
+                                    <param id="0" name="First value">Multiplayer.PeerAlias</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">txt_PlayerName.Text</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8925655159615627" type="avatar_room">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">txt_PlayerName.ID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="867741290795409" type="avatar_room">
+                                    <param id="0" name="Frame number">49</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6296492440548495" type="txt_PlayerName">
+                                    <param id="0" name="Text">&quot;Player 1&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6779037190331396" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8228396490639146">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="4285129667334567" type="System">
+                                    <param id="0" name="First value">Multiplayer.PeerAlias</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">txt_PlayerName.Text</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9448833385452301" type="avatar_room">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">txt_PlayerName.ID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="6739861205854733" type="avatar_room">
+                                    <param id="0" name="Frame number">49</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6054393000658802" type="txt_PlayerName">
+                                    <param id="0" name="Text">&quot;Player 2&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="256896886397275" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1440239294691126">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9588254673161433" type="System">
+                                    <param id="0" name="First value">Multiplayer.PeerAlias</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">txt_PlayerName.Text</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9178016540026093" type="avatar_room">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">txt_PlayerName.ID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="5892640390717197" type="avatar_room">
+                                    <param id="0" name="Frame number">49</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2193076892589383" type="txt_PlayerName">
+                                    <param id="0" name="Text">&quot;Player 3&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="7759143321835963" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6253922268173311">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3269096727321511" type="System">
+                                    <param id="0" name="First value">Multiplayer.PeerAlias</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">txt_PlayerName.Text</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2638562939886937" type="avatar_room">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">txt_PlayerName.ID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="7540154262789222" type="avatar_room">
+                                    <param id="0" name="Frame number">49</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6810391063778142" type="txt_PlayerName">
+                                    <param id="0" name="Text">&quot;Player 4&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="9329629451020644" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7521014600623974">
+                    <conditions>
+                        <condition id="14" name="On kicked" sid="954328183678334" type="Multiplayer" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3616117007343367">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1353007136560906" type="System">
+                                    <param id="0" name="Variable">room_league</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;1on1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Join room" sid="2941782279431538" type="Multiplayer">
+                                    <param id="0" name="Game">&quot;BrawlerStudios-BrawlConnect&quot;</param>
+                                    <param id="1" name="Instance">GameType</param>
+                                    <param id="2" name="Room">roomName</param>
+                                    <param id="3" name="Max peers">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="6574801318244887">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4731187863182344" type="System">
+                                    <param id="0" name="Variable">room_league</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Team&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6836340109664862" type="System">
+                                    <param id="0" name="Variable">room_league</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;FFA&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Join room" sid="3759036167141485" type="Multiplayer">
+                                    <param id="0" name="Game">&quot;BrawlerStudios-BrawlConnect&quot;</param>
+                                    <param id="1" name="Instance">GameType</param>
+                                    <param id="2" name="Room">roomName</param>
+                                    <param id="3" name="Max peers">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Events specific to chat room peers (i.e. non-host users)." inactive="1" sid="6740723117868569" title="Peer2">
+            <sub-events>
+                <event-block sid="9203673232575584">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1705687031320961" type="btn_menu">
+                            <param id="0" name="Instance variable">state</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="6563839333510469">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="6574369376651191" type="Touch">
+                                    <param id="0" name="Object">btn_send</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="7513737703851806" type="Keyboard">
+                                    <param id="0" name="Key">13</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2369854820513741">
+                                    <conditions>
+                                        <condition id="0" inverted="1" name="Compare text" sid="1405230832798076" type="ChatTextBox">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                            <param id="1" name="Case">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7058825440861357" type="Function">
+                                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&lt;&quot; &amp; Multiplayer.MyAlias &amp; &quot;&gt; &quot; &amp; ChatTextBox.Text</param>
+                                        </action>
+                                        <action id="8" name="Send message" sid="1390783983483759" type="Multiplayer">
+                                            <param id="0" name="Peer ID">&quot;&quot;</param>
+                                            <param id="1" name="Tag">&quot;chat&quot;</param>
+                                            <param id="2" name="Message">ChatTextBox.Text</param>
+                                            <param id="3" name="Mode">0</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="6174097170721546" type="ChatTextBox">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6851704369510052">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="1856487506398269" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;playerName&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="9994833265352303" type="System">
+                            <param id="0" name="Object">txt_PlayerName</param>
+                            <param id="1" name="Expression">txt_PlayerName.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">int(tokenat(Multiplayer.Message,1,&quot;,&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4450993344230541" type="txt_PlayerName">
+                            <param id="0" name="Text">tokenat(Multiplayer.Message,0,&quot;,&quot;)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="239327915848426">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5149418283880918" type="System">
+                                    <param id="0" name="First value">tokenat(Multiplayer.Message,0,&quot;,&quot;)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">MyName</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2667391226612895" type="System">
+                                    <param id="0" name="Variable">MyID</param>
+                                    <param id="1" name="Value">int(tokenat(Multiplayer.Message,1,&quot;,&quot;))</param>
+                                </action>
+                                <action id="8" name="Send message" sid="9612531742197816" type="Multiplayer">
+                                    <param id="0" name="Peer ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;av&quot;</param>
+                                    <param id="2" name="Message">str(MyAvatar)&amp;&quot;,&quot;&amp;MyID</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2248914262168865">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="2237539302885369" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;playerAvatar&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="7884182926200777" type="System">
+                            <param id="0" name="Object">avatar_room</param>
+                            <param id="1" name="Expression">avatar_room.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">int(tokenat(Multiplayer.Message,1,&quot;,&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4507302274712063" type="avatar_room">
+                            <param id="0" name="Frame number">int(tokenat(Multiplayer.Message,0,&quot;,&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7970505084162736">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="4938810973476112" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;chat&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="8435459223149343" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;&lt;&quot; &amp; Multiplayer.FromAlias &amp; &quot;&gt; &quot; &amp; Multiplayer.Message</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Events specific to the chat room host." inactive="1" sid="7742937305645738" title="Host2">
+            <sub-events>
+                <event-block sid="5329399080953345">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5773501614428223" type="btn_menu">
+                            <param id="0" name="Instance variable">state</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="4837197477274635">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="2342806408476284" type="Touch">
+                                    <param id="0" name="Object">btn_send</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="8056590381576561" type="Keyboard">
+                                    <param id="0" name="Key">13</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4324730215438826">
+                                    <conditions>
+                                        <condition id="0" inverted="1" name="Compare text" sid="2864637623582438" type="ChatTextBox">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                            <param id="1" name="Case">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1711158553266147" type="Function">
+                                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;&lt;&quot; &amp; Multiplayer.MyAlias &amp; &quot;&gt; &quot; &amp; ChatTextBox.Text</param>
+                                        </action>
+                                        <action id="9" name="Broadcast message" sid="1096695275025561" type="Multiplayer">
+                                            <param id="0" name="From ID">&quot;&quot;</param>
+                                            <param id="1" name="Tag">&quot;chat&quot;</param>
+                                            <param id="2" name="Message">ChatTextBox.Text</param>
+                                            <param id="3" name="Mode">0</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="8266229850771559" type="ChatTextBox">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9044617499198042">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="9223058623746148" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="6801921375855072" type="avatar_room">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7777666510433074" type="txt_PlayerName">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="3440508905431806" type="avatar_room">
+                            <param id="0" name="Frame number">MyAvatar</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1686121244956941" type="txt_PlayerName">
+                            <param id="0" name="Text">MyName</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3237092449846071" type="System">
+                            <param id="0" name="Variable">MyID</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5751771771274842" type="System">
+                            <param id="0" name="Variable">player1Alive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8265548583310086">
+                    <conditions>
+                        <condition id="11" name="On peer connected" sid="8025413543360129" type="Multiplayer" />
+                    </conditions>
+                    <actions>
+                        <action id="8" name="Send message" sid="3947013531802342" type="Multiplayer">
+                            <param id="0" name="Peer ID">Multiplayer.PeerID</param>
+                            <param id="1" name="Tag">&quot;playerName&quot;</param>
+                            <param id="2" name="Message">Multiplayer.MyAlias&amp;&quot;,&quot;&amp;MyID</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                        <action id="8" name="Send message" sid="4652302163795662" type="Multiplayer">
+                            <param id="0" name="Peer ID">Multiplayer.PeerID</param>
+                            <param id="1" name="Tag">&quot;playerAvatar&quot;</param>
+                            <param id="2" name="Message">str(MyAvatar)&amp;&quot;,&quot;&amp;MyID</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8228917765791982">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1755440908484548" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="4651659261896919" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="2584391599271941" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="8609684315998358" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="4322002110116141" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="4137726898960918" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="1842777742198544" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,4&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="679630598295834" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2996396382609334">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9900358454319128" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="8829973730450361" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="5273726521148015" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="295475801744435" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="8749884547323007" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6211293203860318" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="4865693084741739" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,3&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1825513724633495" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="755906203905583">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1560295673460124" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="2722561870768133" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="7439594964704785" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6116542396340228" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="870108324177777" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5912746386367327" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="7509845998247519" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,2&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6934378765249322" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3334691379724742">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3508986210660702" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="1771255124312651" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="4215657711631115" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="2741422433561486" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="3426225219162068" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="5165121686765025" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="136542903167229" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,1&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4152296848872222" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="184013306117842">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9795138965437483" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="287725633408617" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="9476353055554282" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="972044048234367" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="3117693611065175" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3695221531757582" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="2683587399914226" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,1&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="4485913875034568" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6759974056774356">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8229114144636303" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="2027878100329425" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="4173263549403253" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6672177962688565" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="8227167469363814" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="1946124958492334" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="4799176752230324" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,2&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1893818104597852" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3530286173815816">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8236841538978166" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="4121797455272543" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="4794003833023351" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="5636292913530216" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="9900132458420518" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="636839405377002" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="6016665675733061" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,3&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5291131106762561" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5518029413194284">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4692998605003989" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="826369844563542" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="3612598654554142" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="8704708338242238" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="8265129159738779" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="6897051769390822" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="6705292685133322" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,1&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8877009776515001" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8045054796234126">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6406818357638934" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6876729128104856" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6259461087476481" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="1095919944951272" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="3670969371567368" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="2523951575306913" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="6202996199456691" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,2&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1072256946803399" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2040355798427361">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6828925260248336" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="8501548446305289" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="6514123105366197" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="8579076872145925" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="3500748090677437" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="9530852516369022" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="4576296678895825" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,1&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="2430081373569903" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5853004990468865">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8168666629052717" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="1576076452435427" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="5138581774263772" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="9801946757145056" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="3732372996822782" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="9379987962968903" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="2421483640855298" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,1&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6323332846864601" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7085473866775352">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="883907929787735" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="1879736813032035" type="System">
+                                    <param id="0" name="Variable">player2alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="3297803121722941" type="System">
+                                    <param id="0" name="Variable">player3alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="8985657805956175" type="System">
+                                    <param id="0" name="Variable">player4alive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-33" name="Pick by comparison" sid="8287151296553586" type="System">
+                                    <param id="0" name="Object">txt_PlayerName</param>
+                                    <param id="1" name="Expression">txt_PlayerName.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3440581168107712" type="txt_PlayerName">
+                                    <param id="0" name="Text">Multiplayer.PeerAlias</param>
+                                </action>
+                                <action id="9" name="Broadcast message" sid="9455608065559247" type="Multiplayer">
+                                    <param id="0" name="From ID">&quot;&quot;</param>
+                                    <param id="1" name="Tag">&quot;playerName&quot;</param>
+                                    <param id="2" name="Message">Multiplayer.PeerAlias&amp;&quot;,1&quot;</param>
+                                    <param id="3" name="Mode">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="8575108389438575" type="System">
+                                    <param id="0" name="Variable">player1Alive</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2252516678182748">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="1212916306156926" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;av&quot;</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="1834763554836269" type="System">
+                            <param id="0" name="Object">avatar_room</param>
+                            <param id="1" name="Expression">avatar_room.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">int(tokenat(Multiplayer.Message,1,&quot;,&quot;))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="8730405144147545" type="avatar_room">
+                            <param id="0" name="Frame number">int(tokenat(Multiplayer.Message,0,&quot;,&quot;))</param>
+                        </action>
+                        <action id="9" name="Broadcast message" sid="8976343499164228" type="Multiplayer">
+                            <param id="0" name="From ID">&quot;&quot;</param>
+                            <param id="1" name="Tag">&quot;playerAvatar&quot;</param>
+                            <param id="2" name="Message">str(tokenat(Multiplayer.Message,0,&quot;,&quot;))&amp;&quot;,&quot;&amp;avatar_room.ID</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7403461832285971">
+                    <conditions>
+                        <condition id="15" name="On peer message" sid="3232828019407507" type="Multiplayer">
+                            <param id="0" name="Tag">&quot;chat&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="6431557156720259" type="Function">
+                            <param id="0" name="Name">&quot;AddLog&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;&lt;&quot; &amp; Multiplayer.FromAlias &amp; &quot;&gt; &quot; &amp; Multiplayer.Message</param>
+                        </action>
+                        <action id="9" name="Broadcast message" sid="5623041490551399" type="Multiplayer">
+                            <param id="0" name="From ID">Multiplayer.FromID</param>
+                            <param id="1" name="Tag">&quot;chat&quot;</param>
+                            <param id="2" name="Message">Multiplayer.Message</param>
+                            <param id="3" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

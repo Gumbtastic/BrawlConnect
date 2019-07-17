@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>debugEvenst</name>
+    <events>
+        <variable constant="0" name="scrollSpeed" sid="7772266708402005" static="0" type="number">0</variable>
+        <event-block sid="6694853344590204">
+            <conditions>
+                <condition id="16" name="On any peer message" sid="3889011819578681" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="102069791437469" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;Multiplayer.Message</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7023698266026983">
+            <conditions>
+                <condition id="14" name="On kicked" sid="6143593674423018" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="4854777409001885" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;kicked&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5735542933599808">
+            <conditions>
+                <condition id="11" name="On peer connected" sid="9862252560741204" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="324199306231921" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;Multiplayer.PeerAlias&amp;&quot; connected&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1292581471765734">
+            <conditions>
+                <condition id="13" name="On peer disconnected" sid="6266246131415734" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="874566947575866" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;Multiplayer.PeerAlias&amp;&quot; disconnected: &quot;&amp;Multiplayer.LeaveReason</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="653331707492366">
+            <conditions>
+                <condition id="13" name="On peer disconnected" sid="4330896187701978" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="6788545984383142" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;Multiplayer.Message</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3928379820659884">
+            <conditions>
+                <condition id="2" name="On connected" sid="3445651665445234" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3739037803443577" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;Connected to Server&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5028187033784044">
+            <conditions>
+                <condition id="3" name="On disconnected" sid="2906004612614056" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="3103455312513257" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;disconnected from Server&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5747645872310047">
+            <conditions>
+                <condition id="1" name="On error" sid="3587728782809804" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5180929813390465" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;Error: &quot;&amp;Multiplayer.ErrorMessage</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="969250618958155">
+            <conditions>
+                <condition id="5" name="On joined room" sid="5027902686318405" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7493189165842134" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;Join Room: &quot;&amp;Multiplayer.CurrentRoom</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7799167195808495">
+            <conditions>
+                <condition id="6" name="On left room" sid="8644408486715459" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8649738541481231" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;Left Room&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3440511075487869">
+            <conditions>
+                <condition id="4" name="On logged in" sid="2138024464523881" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7999811693058413" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;Loged in&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1460918873656495">
+            <conditions>
+                <condition id="1" name="On text changed" sid="6175664143036279" type="debug" />
+            </conditions>
+            <actions>
+                <action id="9" name="Scroll to bottom" sid="8360549531360121" type="debug" />
+            </actions>
+        </event-block>
+        <event-block sid="3262508324553154">
+            <conditions>
+                <condition id="1" name="On error" sid="2725890752399869" type="AJAX">
+                    <param id="0" name="Tag">&quot;auth&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="587586860223171" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;Ajax error - auth: &quot;&amp;AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1653005159533999">
+            <conditions>
+                <condition id="1" name="On error" sid="9774014288882796" type="AJAX">
+                    <param id="0" name="Tag">&quot;cruser&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="4774975393140257" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;Ajax error - cruser&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1628153523340197">
+            <conditions>
+                <condition id="0" name="On completed" sid="4040710209381241" type="AJAX">
+                    <param id="0" name="Tag">&quot;cruser&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2756344097643086" type="debug">
+                    <param id="0" name="Text">debug.Text&amp;newline&amp;&quot;Ajax completed - cruser: &quot;&amp;AJAX.LastData</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,915 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>commonEvents</name>
+    <events>
+        <include>Variables</include>
+        <event-block sid="3285688384025688">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="4079434009815569" type="System">
+                    <param id="0" name="First value">MyAvatar</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">-1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="132903755595247" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="892547060762101" type="Dictionary">
+                    <param id="0" name="Key">&quot;0&quot;</param>
+                    <param id="1" name="Value">&quot;Villager&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="1286170917011905" type="Dictionary">
+                    <param id="0" name="Key">&quot;1&quot;</param>
+                    <param id="1" name="Value">&quot;Bowser&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="9517391670785604" type="Dictionary">
+                    <param id="0" name="Key">&quot;2&quot;</param>
+                    <param id="1" name="Value">&quot;Bowser Jr.&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="8458250283507106" type="Dictionary">
+                    <param id="0" name="Key">&quot;3&quot;</param>
+                    <param id="1" name="Value">&quot;Captain Falcon&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="5391538728519051" type="Dictionary">
+                    <param id="0" name="Key">&quot;4&quot;</param>
+                    <param id="1" name="Value">&quot;Rosalina&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7881297619717546" type="Dictionary">
+                    <param id="0" name="Key">&quot;5&quot;</param>
+                    <param id="1" name="Value">&quot;Robin&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="3618791134807222" type="Dictionary">
+                    <param id="0" name="Key">&quot;6&quot;</param>
+                    <param id="1" name="Value">&quot;Dark Pit&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="768545060365461" type="Dictionary">
+                    <param id="0" name="Key">&quot;7&quot;</param>
+                    <param id="1" name="Value">&quot;Diddy Kong&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="1052154196308756" type="Dictionary">
+                    <param id="0" name="Key">&quot;8&quot;</param>
+                    <param id="1" name="Value">&quot;Donkey Kong&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7304640688510573" type="Dictionary">
+                    <param id="0" name="Key">&quot;9&quot;</param>
+                    <param id="1" name="Value">&quot;Dr. Mario&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="2860629145463629" type="Dictionary">
+                    <param id="0" name="Key">&quot;10&quot;</param>
+                    <param id="1" name="Value">&quot;Duck Hunt&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="1483415477946511" type="Dictionary">
+                    <param id="0" name="Key">&quot;11&quot;</param>
+                    <param id="1" name="Value">&quot;Falco&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="2931846433720781" type="Dictionary">
+                    <param id="0" name="Key">&quot;12&quot;</param>
+                    <param id="1" name="Value">&quot;Fox&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7020831667486501" type="Dictionary">
+                    <param id="0" name="Key">&quot;13&quot;</param>
+                    <param id="1" name="Value">&quot;Mr. Game &amp; Watch&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="2150324518764389" type="Dictionary">
+                    <param id="0" name="Key">&quot;14&quot;</param>
+                    <param id="1" name="Value">&quot;Ganondorf&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="5978818203672456" type="Dictionary">
+                    <param id="0" name="Key">&quot;15&quot;</param>
+                    <param id="1" name="Value">&quot;Charizard&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="1708881095735389" type="Dictionary">
+                    <param id="0" name="Key">&quot;16&quot;</param>
+                    <param id="1" name="Value">&quot;Ike&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="3448094893685742" type="Dictionary">
+                    <param id="0" name="Key">&quot;17&quot;</param>
+                    <param id="1" name="Value">&quot;King Dedede&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="6520503943680048" type="Dictionary">
+                    <param id="0" name="Key">&quot;18&quot;</param>
+                    <param id="1" name="Value">&quot;Kirby&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="7674545502634959" type="Dictionary">
+                    <param id="0" name="Key">&quot;19&quot;</param>
+                    <param id="1" name="Value">&quot;Link&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="6692709444304935" type="Dictionary">
+                    <param id="0" name="Key">&quot;20&quot;</param>
+                    <param id="1" name="Value">&quot;Little Mac&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="4322588600831584" type="Dictionary">
+                    <param id="0" name="Key">&quot;21&quot;</param>
+                    <param id="1" name="Value">&quot;Lucario&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="9023282617689624" type="Dictionary">
+                    <param id="0" name="Key">&quot;22&quot;</param>
+                    <param id="1" name="Value">&quot;Lucina&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="6477707393485105" type="Dictionary">
+                    <param id="0" name="Key">&quot;23&quot;</param>
+                    <param id="1" name="Value">&quot;Luigi&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="5525894471212464" type="Dictionary">
+                    <param id="0" name="Key">&quot;24&quot;</param>
+                    <param id="1" name="Value">&quot;Mario&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="580609590209163" type="Dictionary">
+                    <param id="0" name="Key">&quot;25&quot;</param>
+                    <param id="1" name="Value">&quot;Marth&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="6383967037414162" type="Dictionary">
+                    <param id="0" name="Key">&quot;26&quot;</param>
+                    <param id="1" name="Value">&quot;Mega Man&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="2674229380553535" type="Dictionary">
+                    <param id="0" name="Key">&quot;27&quot;</param>
+                    <param id="1" name="Value">&quot;Meta Knight&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="6643893919675639" type="Dictionary">
+                    <param id="0" name="Key">&quot;28&quot;</param>
+                    <param id="1" name="Value">&quot;Mii Fighters&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="9351524571632739" type="Dictionary">
+                    <param id="0" name="Key">&quot;29&quot;</param>
+                    <param id="1" name="Value">&quot;Nes&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="6251044120303974" type="Dictionary">
+                    <param id="0" name="Key">&quot;30&quot;</param>
+                    <param id="1" name="Value">&quot;Pac Man&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="4388991945445321" type="Dictionary">
+                    <param id="0" name="Key">&quot;31&quot;</param>
+                    <param id="1" name="Value">&quot;Palutena&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="1054736900140338" type="Dictionary">
+                    <param id="0" name="Key">&quot;32&quot;</param>
+                    <param id="1" name="Value">&quot;Peach&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="305990503427312" type="Dictionary">
+                    <param id="0" name="Key">&quot;33&quot;</param>
+                    <param id="1" name="Value">&quot;Pikachu&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="1418320159558111" type="Dictionary">
+                    <param id="0" name="Key">&quot;34&quot;</param>
+                    <param id="1" name="Value">&quot;Olimar&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="1401099534110238" type="Dictionary">
+                    <param id="0" name="Key">&quot;35&quot;</param>
+                    <param id="1" name="Value">&quot;Pit&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="4608858824940774" type="Dictionary">
+                    <param id="0" name="Key">&quot;36&quot;</param>
+                    <param id="1" name="Value">&quot;Jigglypuff&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="527917371087143" type="Dictionary">
+                    <param id="0" name="Key">&quot;37&quot;</param>
+                    <param id="1" name="Value">&quot;Greninja&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="3452535733010418" type="Dictionary">
+                    <param id="0" name="Key">&quot;38&quot;</param>
+                    <param id="1" name="Value">&quot;R.O.B&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="8224064992967996" type="Dictionary">
+                    <param id="0" name="Key">&quot;39&quot;</param>
+                    <param id="1" name="Value">&quot;Samus&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="4579238567880778" type="Dictionary">
+                    <param id="0" name="Key">&quot;40&quot;</param>
+                    <param id="1" name="Value">&quot;Sheik&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="3535848991784869" type="Dictionary">
+                    <param id="0" name="Key">&quot;41&quot;</param>
+                    <param id="1" name="Value">&quot;Shulk&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="8314786392848959" type="Dictionary">
+                    <param id="0" name="Key">&quot;42&quot;</param>
+                    <param id="1" name="Value">&quot;Sonic&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="9634138431303859" type="Dictionary">
+                    <param id="0" name="Key">&quot;43&quot;</param>
+                    <param id="1" name="Value">&quot;Toon Link&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="906194126543266" type="Dictionary">
+                    <param id="0" name="Key">&quot;44&quot;</param>
+                    <param id="1" name="Value">&quot;Wario&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="857421531525888" type="Dictionary">
+                    <param id="0" name="Key">&quot;45&quot;</param>
+                    <param id="1" name="Value">&quot;Wii Fit Trainer&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="8543740594445779" type="Dictionary">
+                    <param id="0" name="Key">&quot;46&quot;</param>
+                    <param id="1" name="Value">&quot;Yoshi&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="8711110396757199" type="Dictionary">
+                    <param id="0" name="Key">&quot;47&quot;</param>
+                    <param id="1" name="Value">&quot;Zelda&quot;</param>
+                </action>
+                <action id="0" name="Add key" sid="4020083535131089" type="Dictionary">
+                    <param id="0" name="Key">&quot;48&quot;</param>
+                    <param id="1" name="Value">&quot;Sheik&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7375154823219486">
+                    <conditions>
+                        <condition id="1" name="For each key" sid="2312083199648823" type="Dictionary" />
+                        <condition id="2" name="Compare current value" sid="2028952178322026" type="Dictionary">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Value">MyName</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4076696494166343" type="avatar">
+                            <param id="0" name="Frame number">int(Dictionary.CurrentKey)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1529744888602605" type="System">
+                            <param id="0" name="Variable">MyAvatar</param>
+                            <param id="1" name="Value">int(Dictionary.CurrentKey)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4329280042526322">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3590057472809131" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="5037975209849598" type="Fonts">
+                    <param id="0" name="Family name">&quot;playbold&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="8512197282352911" type="input_txtBox">
+                    <param id="0" name="Property name">&quot;font-family&quot;</param>
+                    <param id="1" name="Value">&quot;playregular&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="175170438035022" type="input_txtBox">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;24px&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="4443902828963598" type="input_txtBox">
+                    <param id="0" name="Property name">&quot;border&quot;</param>
+                    <param id="1" name="Value">&quot;0&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="1283612657219191" type="input_txtBox">
+                    <param id="0" name="Property name">&quot;border-bottom&quot;</param>
+                    <param id="1" name="Value">&quot;1px solid #ccc&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="4025497347491531" type="input_txtBox">
+                    <param id="0" name="Property name">&quot;padding-left&quot;</param>
+                    <param id="1" name="Value">&quot;10px&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="8187016826654013" type="debug">
+                    <param id="0" name="Property name">&quot;background&quot;</param>
+                    <param id="1" name="Value">&quot;transparent&quot;</param>
+                </action>
+                <action id="5" name="Set frame" sid="9548052467999705" type="avatar">
+                    <param id="0" name="Frame number">MyAvatar</param>
+                </action>
+                <action id="18" name="Lock orientation" sid="938073203858646" type="Browser">
+                    <param id="0" name="Orientation">0</param>
+                </action>
+                <action id="0" name="Set text" sid="7948476992034416" type="txt_UserName">
+                    <param id="0" name="Text">MyName</param>
+                </action>
+                <action id="-9" name="Destroy" sid="1056453133455116" type="dialog_texts" />
+                <action id="-9" name="Destroy" sid="528920017606323" type="dialog_sprites" />
+            </actions>
+            <sub-events>
+                <event-block sid="2771797703469993">
+                    <conditions>
+                        <condition id="-16" name="Is on layer" sid="4991553813018268" type="menuMovers_sprite">
+                            <param id="0" name="Layer">&quot;NavMenu&quot;</param>
+                        </condition>
+                        <condition id="-16" name="Is on layer" sid="3613025364461831" type="menuMover_txt">
+                            <param id="0" name="Layer">&quot;NavMenu&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3580582526471561" type="menuMovers_sprite">
+                            <param id="0" name="Pin to">scrollBG2</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5215329439913301" type="menuMover_txt">
+                            <param id="0" name="Pin to">scrollBG2</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4070086969125693">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6281414086063608" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;GameRoom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4689312137226193">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3433375335558575" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Main_Matches&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9245319043973214">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="5953915416324239" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">34</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="9198168357397476" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7956957457157857">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="4092634397149887" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">35</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="5218089742720906" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4603582997145224">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="3677918613363247" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">37</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="2800006631063648" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6622293460698894">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="9070263012352528" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">39</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="9152699070822218" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6719266461800262">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3542382461123018" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Main_Ranking&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4010611067331588">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="7702414236231822" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">34</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="4059699120675318" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="799984065278438">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="1187388851781735" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">35</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="1081658208892075" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9205385581441315">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="5744688354808546" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">37</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="7444960709932565" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="837069626251053">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="3399469068032615" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">39</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="3858470681791032" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1368854344059924">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="356902856543773" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Main_Friends&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6024297108135303">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="4949351658798234" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">34</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="5562234535241104" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="721559042336445">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="5278809096174864" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">35</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="8227562216634815" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2998871086533718">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="372263743669446" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">37</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="7152360912077663" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4056771482506147">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="5033431893585147" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">39</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="4482783818269713" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4847917064524234">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8116384691292699" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Main_Clan&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7620629353448015">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="2152303266977969" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">34</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="486867551635622" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8067535462996481">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="6608528850313879" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">35</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="3858790735056454" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5451534528097698">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="2003151200604812" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">37</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="1459460601605962" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6382753411106263">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="7614566321823604" type="btn_bg_tabBar">
+                                            <param id="0" name="Unique ID">39</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Set frame" sid="2186904035621014" type="btn_bg_tabBar">
+                                            <param id="0" name="Frame number">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9610379728418747">
+                    <conditions>
+                        <condition id="7" inverted="1" name="Is connected" sid="4609103843411005" type="Multiplayer" />
+                        <condition id="-4" name="Trigger once while true" sid="2059621598570643" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Connect" sid="9379939035542015" type="Multiplayer">
+                            <param id="0" name="Server">&quot;wss://multiplayer.scirra.com&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8447620376539958">
+                    <conditions>
+                        <condition id="7" name="Is connected" sid="3966844764980486" type="Multiplayer" />
+                        <condition id="8" inverted="1" name="Is logged in" sid="240321493430608" type="Multiplayer" />
+                        <condition id="-4" name="Trigger once while true" sid="1805157590431848" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Log in" sid="594453076885108" type="Multiplayer">
+                            <param id="0" name="Alias">MyName</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3361760263192562">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="429531313658818" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;GameRoom&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1021496491513522" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;openGameRoom&quot;</param>
+                </condition>
+                <condition id="7" name="Is connected" sid="8604703312539043" type="Multiplayer" />
+                <condition id="8" name="Is logged in" sid="1984019321330122" type="Multiplayer" />
+                <condition id="9" inverted="1" name="Is in room" sid="3781728341072769" type="Multiplayer" />
+                <condition id="-4" name="Trigger once while true" sid="5801571466562849" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Join room" sid="9641191990913609" type="Multiplayer">
+                    <param id="0" name="Game">&quot;BrawlerStudios-BrawlConnect&quot;</param>
+                    <param id="1" name="Instance">&quot;test&quot;</param>
+                    <param id="2" name="Room">&quot;lobby&quot;</param>
+                    <param id="3" name="Max peers">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5844908442309169">
+            <conditions>
+                <condition id="17" name="On tap object" sid="4906803773457103" type="Touch">
+                    <param id="0" name="Object">btn_close</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="5676939330512507" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="4029681405976746">
+            <conditions>
+                <condition id="17" name="On tap object" sid="5027872988011094" type="Touch">
+                    <param id="0" name="Object">lable_NavMenuBtn6</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="9134155208511146" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="216458522704914" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;login&quot;</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="497494754206338" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;register&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Clear local storage" sid="8883068704948055" type="WebStorage" />
+                <action id="-2" name="Go to layout" sid="22408547004325" type="System">
+                    <param id="0" name="Layout">login</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6670749089366841">
+            <conditions>
+                <condition id="17" name="On tap object" sid="2731079795387566" type="Touch">
+                    <param id="0" name="Object">lable_NavMenuBtn7</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3410213811328982" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="1491811365852023" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="3228216085366973">
+            <conditions>
+                <condition id="0" name="On function" sid="7914207259669612" type="Function">
+                    <param id="0" name="Name">&quot;backBtn_leave&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="8522453389500947" type="System">
+                    <param id="0" name="Variable">leaveTrigger</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="827553508331049">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5612607014464963" type="System">
+                            <param id="0" name="Variable">leaveTrigger</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="955356252467022" type="System">
+                            <param id="0" name="Object to create">dialog_bg_small</param>
+                            <param id="1" name="Layer">&quot;Dialogs&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">1024</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6593917935461659" type="System">
+                            <param id="0" name="Object to create">dilog_txt_small</param>
+                            <param id="1" name="Layer">&quot;Dialogs&quot;</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">1024</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2212325941583981">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1622256815399942" type="System">
+                            <param id="0" name="Variable">leaveTrigger</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Close" sid="3673120523827489" type="Browser" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" sid="9160925538300925">
+            <conditions>
+                <condition behavior="Fade" id="2" name="On wait finished" sid="3215006980658489" type="dialog_bg_small" />
+                <condition id="-19" name="On destroyed" sid="28490546252336" type="dialog_bg_small" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9715541743880528" type="System">
+                    <param id="0" name="Variable">leaveTrigger</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5849054068025566">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5891804452957351" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3361873441760667">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="293843497291685" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;GameRoom&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="7219093798386601" type="System">
+                            <param id="0" name="First value">LayoutName</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;openGameRoom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-group description="" sid="7623480301578692" title="tabBar">
+                            <sub-events>
+                                <event-block sid="2059128120021768">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="219145847411532" type="Touch">
+                                            <param id="0" name="Object">lable_tabBar_1</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="1565507318010919" type="System">
+                                            <param id="0" name="First value">LayoutName</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;Main_Matches&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="4027760428462553" type="System">
+                                            <param id="0" name="Layout">&quot;Main_Matches&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3493044987430235">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="2733087466002268" type="Touch">
+                                            <param id="0" name="Object">lable_tabBar_2</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="6677210880807127" type="System">
+                                            <param id="0" name="First value">LayoutName</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;Main_Ranking&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="5397153175404421" type="System">
+                                            <param id="0" name="Layout">&quot;Main_Ranking&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9298468595501115">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="8795301220660744" type="Touch">
+                                            <param id="0" name="Object">lable_tabBar_3</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="1572381509065572" type="System">
+                                            <param id="0" name="First value">LayoutName</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;Main_Friends&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="2318680786726937" type="System">
+                                            <param id="0" name="Layout">&quot;Main_Friends&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3887366983649087">
+                                    <conditions>
+                                        <condition id="17" name="On tap object" sid="2949383984246189" type="Touch">
+                                            <param id="0" name="Object">lable_tabBar_4</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="1655670818919037" type="System">
+                                            <param id="0" name="First value">LayoutName</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;Main_Clan&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-25" name="Go to layout (by name)" sid="741134485607849" type="System">
+                                            <param id="0" name="Layout">&quot;Main_Clan&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8083528224545675">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6106798662628658" type="Touch">
+                    <param id="0" name="Object">btn_menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="MoveTo" id="9" name="Stop" sid="449762791910833" type="scrollBG2" />
+                <action id="-14" name="Toggle boolean" sid="228999424045931" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="812952230741779">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2372129182222697" type="btn_menu">
+                            <param id="0" name="Instance variable">state</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="MoveTo" id="4" name="Move to XY" sid="9720798257385651" type="scrollBG2">
+                            <param id="0" name="X">scrollBG2.X</param>
+                            <param id="1" name="Y">88</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="6093438902034981" type="debug">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="6824865420317748" type="ChatLog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="5979918845375711" type="ChatTextBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="3846199273819218" type="input_password">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="8878466188358613" type="input_password_check">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="251125158198069" type="input_usermail">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="478020677745639" type="input_username">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8652391147535653">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2659123297589125" type="btn_menu">
+                            <param id="0" name="Instance variable">state</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="MoveTo" id="4" name="Move to XY" sid="1909845284162397" type="scrollBG2">
+                            <param id="0" name="X">scrollBG2.X</param>
+                            <param id="1" name="Y">-961</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1287449910681884">
+            <conditions>
+                <condition behavior="MoveTo" id="0" name="On hit target position" sid="3979293398970926" type="scrollBG2" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6333081562489014">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5928234663758809" type="btn_menu">
+                            <param id="0" name="Instance variable">state</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="7257789338370821" type="debug">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="6192179382877685" type="ChatLog">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="6504734546325836" type="ChatTextBox">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="7038414729676891" type="input_password">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="8005880106140773" type="input_password_check">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="5933814097872705" type="input_usermail">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set visible" sid="3079040463343073" type="input_username">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

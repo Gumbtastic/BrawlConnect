@@ -1,0 +1,772 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>openGameRoomEvents</name>
+    <events>
+        <include>commonEvents</include>
+        <include>debugEvenst</include>
+        <event-block sid="625998980615044">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9958812464926492" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="7171171803165781" type="btn_gameLeague">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="0" name="Set text" sid="5681124051287298" type="txt_GameLeague">
+                    <param id="0" name="Text">&quot; Back&quot;</param>
+                </action>
+                <action id="0" name="Set text" sid="8040881545180658" type="txt_GameLeague_ext">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="5016786809567085" type="ChatTextBox">
+                    <param id="0" name="Property name">&quot;font-size&quot;</param>
+                    <param id="1" name="Value">&quot;32px&quot;</param>
+                </action>
+                <action id="7" name="Set CSS style" sid="1984901989572814" type="ChatTextBox">
+                    <param id="0" name="Property name">&quot;background&quot;</param>
+                    <param id="1" name="Value">&quot;transparent&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="9669592228601103" type="debug" />
+                <action id="-9" name="Set value" sid="6323940459120932" type="System">
+                    <param id="0" name="Variable">roomName</param>
+                    <param id="1" name="Value">ChatTextBox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="4700588855769129">
+            <conditions>
+                <condition id="17" name="On tap object" sid="5978498236291966" type="Touch">
+                    <param id="0" name="Object">txt_GameLeague</param>
+                </condition>
+                <condition id="17" name="On tap object" sid="1949263746737678" type="Touch">
+                    <param id="0" name="Object">btn_gameLeague</param>
+                </condition>
+                <condition id="17" name="On back button" sid="156513076422366" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9991368648382469" type="System">
+                    <param id="0" name="Layout">Main_Matches_gate</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8135161167727865">
+            <conditions>
+                <condition id="1" name="On text changed" sid="4213682656256341" type="ChatTextBox" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="741833055149152" type="System">
+                    <param id="0" name="Variable">roomName</param>
+                    <param id="1" name="Value">ChatTextBox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7472808706106739">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7558861440404638" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9292597478415785">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="4058238741331244" type="Touch">
+                            <param id="0" name="Object">btn_slide_right</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5563534927599013" type="btn_slide_right">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">btn_slide_right.id</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8899340271015779" type="btn_slide_right">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">btn_slide_right.maxStep</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="5954741436276659" type="System">
+                            <param id="0" name="Object">btn_slide_left</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="3362640743470662" type="btn_slide_left">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">btn_slide_right.id</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="4831402802331579" type="System">
+                            <param id="0" name="Object">slide_content</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9519181502263709" type="slide_content">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">btn_slide_right.id</param>
+                        </condition>
+                        <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="6937131344438761" type="slide_content" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="9365051298071424" type="btn_slide_right">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="4164638430683449" type="btn_slide_left">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="MoveTo" id="4" name="Move to XY" sid="6508116470446632" type="slide_content">
+                            <param id="0" name="X">slide_content.X-160</param>
+                            <param id="1" name="Y">slide_content.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4881337379992099">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4754026636834813" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;private&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="4380154625478949" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5055498030313917" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3645890148188696" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6692650808096999" type="System">
+                                    <param id="0" name="Variable">room_private</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1642197658853628">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5958613377931412" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;league&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="810133871819925" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3860761860084537" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4124016472574829" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7227370451889505" type="System">
+                                    <param id="0" name="Variable">room_league</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9557746297464815">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3904242025067735" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;rules&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="5012580391882777" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="6476055633232688" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3691946600627004" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1751061501122867" type="System">
+                                    <param id="0" name="Variable">room_rules</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8985833008679946" type="lable_tabBar_2">
+                                    <param id="0" name="Text">slide_content.Text&amp;&quot; Limit:&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6005841824515971">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3153153539190343" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;limit&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="7095410641121128" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="6907644250607294" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1489069711104439" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3714385539997077" type="System">
+                                    <param id="0" name="Variable">room_limit</param>
+                                    <param id="1" name="Value">int(slide_content.Text)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2251008559696851">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5549479301616688" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;custom&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="7331091418172899" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8146318180315622" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4501544758482726" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3725270548762877" type="System">
+                                    <param id="0" name="Variable">room_custom</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8340627110729001">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5584518565035105" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;handicap&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="9933296458358703" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1660668182699468" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="823756099570326" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6699839032787751" type="System">
+                                    <param id="0" name="Variable">room_handicap</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5803256305918041">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="416524428265176" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;damage&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="8628051256167334" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9324296039923966" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5362433336467128" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_right.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4636423231793578" type="System">
+                                    <param id="0" name="Variable">room_damage</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4725913694333739">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="8550332535952121" type="Touch">
+                            <param id="0" name="Object">btn_slide_left</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8433435408295086" type="btn_slide_left">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">btn_slide_left.id</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9608995921341024" type="btn_slide_left">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="617573981976665" type="System">
+                            <param id="0" name="Object">btn_slide_right</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8996548078518015" type="btn_slide_right">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">btn_slide_left.id</param>
+                        </condition>
+                        <condition id="-19" name="Pick all" sid="3861819291065069" type="System">
+                            <param id="0" name="Object">slide_content</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4612666853201817" type="slide_content">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">btn_slide_left.id</param>
+                        </condition>
+                        <condition behavior="MoveTo" id="3" inverted="1" name="Is moving" sid="8132461520657892" type="slide_content" />
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="8373757483464712" type="btn_slide_left">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="5341427093415895" type="btn_slide_right">
+                            <param id="0" name="Instance variable">step</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="MoveTo" id="4" name="Move to XY" sid="7734253724689792" type="slide_content">
+                            <param id="0" name="X">slide_content.X+160</param>
+                            <param id="1" name="Y">slide_content.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2644790069213177">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7322808879005463" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;private&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="2519965126099507" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7511546564188178" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8687234875835034" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="297621778804011" type="System">
+                                    <param id="0" name="Variable">room_private</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8252770906987935">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8253120451382639" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;league&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="1809493208029155" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3183763116365216" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2822395653881725" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6552641280934135" type="System">
+                                    <param id="0" name="Variable">room_league</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7496314086442365">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9653064397331457" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;rules&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="522692494373698" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7325117824518595" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5028399440297459" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5489977082195366" type="System">
+                                    <param id="0" name="Variable">room_rules</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                                <action id="0" name="Set text" sid="7121679666135285" type="lable_tabBar_2">
+                                    <param id="0" name="Text">slide_content.Text&amp;&quot; Limit:&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1822038428562736">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2313693258384563" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;limit&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="2595884374471609" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1714242155047591" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4317645203368095" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1123256378089561" type="System">
+                                    <param id="0" name="Variable">room_limit</param>
+                                    <param id="1" name="Value">int(slide_content.Text)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7133325696205057">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2670884421247906" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;custom&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="3864199471293858" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5643870834184291" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8101202922215833" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4606787367805246" type="System">
+                                    <param id="0" name="Variable">room_custom</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4502315668213924">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2443153991937304" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;handicap&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="9964190664383086" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1243410904768563" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1518491993003246" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8715327605512488" type="System">
+                                    <param id="0" name="Variable">room_handicap</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3076688585162524">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5437041985340014" type="btn_slide_right">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;damage&quot;</param>
+                                </condition>
+                                <condition id="-19" name="Pick all" sid="2410198761119073" type="System">
+                                    <param id="0" name="Object">slide_content</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4827257291138269" type="slide_content">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.id</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3438544530617919" type="slide_content">
+                                    <param id="0" name="Instance variable">step</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">btn_slide_left.step</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5350720966324501" type="System">
+                                    <param id="0" name="Variable">room_damage</param>
+                                    <param id="1" name="Value">slide_content.Text</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6648939208218421">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="8812041881274159" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Leave room" sid="8573634988548866" type="Multiplayer" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="110971809754904">
+                            <conditions>
+                                <condition id="9" inverted="1" name="Is in room" sid="4197319839720333" type="Multiplayer" />
+                            </conditions>
+                            <actions>
+                                <action id="-25" name="Go to layout (by name)" sid="5716028441349335" type="System">
+                                    <param id="0" name="Layout">&quot;GameRoom&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8124962374545829">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="1149861782657352" type="Touch" />
+                        <condition id="4" inverted="1" name="Is touching object" sid="7352518691398492" type="Touch">
+                            <param id="0" name="Object">btn_slide_left</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Is touching object" sid="4572677894055194" type="Touch">
+                            <param id="0" name="Object">btn_slide_right</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="4664556135857227" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8142934381639083" type="btn_slide_left">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="6371621353341474" type="btn_slide_right">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="6585852070302525" type="menu_buttonBG">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="338189234736924" type="slide_overlay">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="9088474158141672" type="btn_bg_tabBar">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3958014951048306" type="Label">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3473007706530013" type="lable_menuBtn1">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="9277447169638596" type="lable_menuBtn2">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="4528993754939115" type="lable_tabBar_2">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8028824592192234" type="slide_content">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="850399024212378" type="ChatTextBox">
+                            <param id="0" name="Pin to">scrollBG</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3939257452371444">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="4435175025558756" type="scrollBG" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="7123710211869965">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="8840039779506926" type="scrollBG">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Y co-ordinate">88</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="1941046562050187" type="scrollBG">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">88</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="1331392679705599">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1011058998158569" type="scrollBG">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">-48</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="MoveTo" id="4" name="Move to XY" sid="9277075604684644" type="scrollBG">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">-38</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="728934231476187">
+                    <conditions>
+                        <condition behavior="MoveTo" id="0" name="On hit target position" sid="6064710169659727" type="scrollBG" />
+                        <condition behavior="DragDrop" id="0" inverted="1" name="Is dragging" sid="2240840908403965" type="scrollBG" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="1" name="Unpin" sid="5307025679642949" type="btn_slide_left" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="7252373087639334" type="btn_slide_right" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="2380659823658491" type="menu_buttonBG" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="2009936953805488" type="slide_overlay" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="7635919998675883" type="btn_bg_tabBar" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="3474336285908011" type="Label" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="1950413254612239" type="lable_menuBtn1" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="7642745881179091" type="lable_menuBtn2" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="5088490668187324" type="lable_tabBar_2" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="4868506997722117" type="slide_content" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="8959071309872666" type="ChatTextBox" />
+                    </actions>
+                </event-block>
+                <event-block sid="177342438964961">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="9814527551775062" type="scrollBG">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">48</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="4489016807315815" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="5091959981997731" type="ChatTextBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9499892189427255">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="6781392432604944" type="scrollBG">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">48</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="5613865609872005" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set visible" sid="4714678202118025" type="ChatTextBox">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7182152703494012">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="5277665359332573" type="scrollBG">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">98</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="2547428095521457" type="scrollBG">
+                            <param id="0" name="Y">98</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3416906435117367">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="5795810389450791" type="scrollBG">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">-48</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="7483260422178769" type="scrollBG">
+                            <param id="0" name="Y">-48</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="46841779625784">
+            <conditions>
+                <condition id="6" name="On left room" sid="9208392171827336" type="Multiplayer" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="9650584568131616" type="System">
+                    <param id="0" name="Layout">&quot;GameRoom&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMatches</name>
+    <events>
+        <include>commonEvents</include>
+        <include>debugEvenst</include>
+        <event-block sid="4058623926478379">
+            <conditions>
+                <condition id="0" name="Compare text" sid="183690463853744" type="txt_UserName">
+                    <param id="0" name="Text to compare">&quot;&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="595847358784117" type="txt_UserName">
+                    <param id="0" name="Text">MyName</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1015073664056294">
+            <conditions>
+                <condition id="17" name="On back button" sid="4078906253383261" type="Browser" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="3885322188636947" type="Function">
+                    <param id="0" name="Name">&quot;backBtn_leave&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6657868681762782">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7167738398234081" type="btn_menu">
+                    <param id="0" name="Instance variable">state</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8639903330759147">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="1081954025881705" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9394992147640607" type="System">
+                            <param id="0" name="Variable">GameType</param>
+                            <param id="1" name="Value">lable_menuBtn1.Text</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="8022129093950747" type="System">
+                            <param id="0" name="Layout">LayoutName&amp;&quot;_Gate&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7773922011727882">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="8409492276182032" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9698991563961693" type="System">
+                            <param id="0" name="Variable">GameType</param>
+                            <param id="1" name="Value">lable_menuBtn2.Text</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="7135258987550785" type="System">
+                            <param id="0" name="Layout">LayoutName&amp;&quot;_Gate&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8465326215435792">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="7322818224632801" type="Touch">
+                            <param id="0" name="Object">lable_menuBtn3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="5005026512589493" type="System">
+                            <param id="0" name="Variable">GameType</param>
+                            <param id="1" name="Value">lable_menuBtn3.Text</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="9565343718812439" type="System">
+                            <param id="0" name="Layout">LayoutName&amp;&quot;_Gate&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

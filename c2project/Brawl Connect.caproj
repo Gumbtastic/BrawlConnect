@@ -1,0 +1,1273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Brawl Connect</name>
+    <description>asd</description>
+    <version>1.0.0.0</version>
+    <author>asd</author>
+    <author-email>asd@asd.com</author-email>
+    <author-website>http://</author-website>
+    <app-id>com.sudiogumb.brawlconnect</app-id>
+    <unique-id>2m2oqhlgof90t</unique-id>
+    <saved-with-version>26900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Kyatric@gmail.com - JavaScript implementation of the RSA Data Security, Inc. MD5 Message: Copyright (c) 1998 - 2009, Paul Johnston &amp; Contributors - A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined in FIPS 180-1 - Version 2.2 Copyright Paul Johnston 2000 - 2009 &amp; contributors - A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined in FIPS 180-2 * Version 2.2 Copyright Angel Marin, Paul Johnston &amp; contributors 2000 - 2009. * Distributed under the BSD License * See http://pajhome.org.uk/crypt/md5 for details. * Also http://anmar.eu.org/projects/jssha2/" id="CBhash" version="1">CB Hash</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="List" version="1">List</plugin>
+        <plugin author="Scirra" id="Multiplayer" version="1">Multiplayer</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Rex.Rainbow" id="Rex_MoveTo" version="1">MoveTo</behavior>
+        <behavior author="lunarray" id="lunarray_LiteTween" version="1">LiteTween</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>1136</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Preload</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">Node-Webkit</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Title" sid="567985413000262">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Label" sid="1291786171480263">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="190613490258947">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="NameTextBox" sid="1469320512466032">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="ChatLog" sid="5408975575978266">
+            <plugin id="TextBox" />
+            <behaviors>
+                <behavior-type name="LiteTween" sid="6981195908339759">
+                    <behavior id="lunarray_LiteTween" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="6892618626761546">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ChatTextBox" sid="3964265403639984">
+            <plugin id="TextBox" />
+            <behaviors>
+                <behavior-type name="MoveTo" sid="6356288108119707">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="215658067088537">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="PeerList" sid="6280765575925442">
+            <plugin id="List" />
+        </object-type>
+        <object-type name="Multiplayer" sid="2102346730747177">
+            <plugin id="Multiplayer" />
+        </object-type>
+        <object-type name="Keyboard" sid="8337804910901519">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Function" sid="6713570013783801">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Browser" sid="8731513663264036">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="navBar" sid="5789835812591882">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8429812616248618" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_BrawlConnect" sid="6996900950343541">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="table_bgColor" sid="6619801878472713" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="btn_menu" sid="9133887654188949">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="state" sid="9741738340357751" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1322457928718566" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\btn_menu.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_gameLeague" sid="8249956520720016">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="175128843823676" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\btn_setGameLeague.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\btn_navBar_back.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_GameLeague" sid="8093363296468339">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_GameLeague_ext" sid="8116793303687159">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="keyLine" sid="1070788186089579">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2564596565059873" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\btn_menu.png">
+                        <collision-poly>
+                            <point x="5.78703e-005" y="0.0487805" />
+                            <point x="0.00078125" y="0" />
+                            <point x="0.00150463" y="0.0487805" />
+                            <point x="0.0015625" y="0.487805" />
+                            <point x="0.00150463" y="0.951219" />
+                            <point x="0.00078125" y="1" />
+                            <point x="5.78703e-005" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tabBar" sid="5957029538893362">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1916373898477789" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tabBar_sub" sid="6286834275999302">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9320548902179784" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="shortProfileBG" sid="5780488984214999">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2837633526047707" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_UserName" sid="2526864703412358">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="menu_buttonBG" sid="9145104378377692">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="id" sid="4048402339379648" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="458004576193459" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.961832" />
+                            <point x="0" y="0.961832" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="avatar" sid="5243462561272232">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="49" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7126164952652151" speed="0">
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\bewohner.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\bowser.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\bowser_jr.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\captian_falcon.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\daisy_luma.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\daraen.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\dark_pit.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\diddy_kong.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\donky_kong.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\dr_mario.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\duck_hunt_duo.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\falcon.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\fox.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\game_watch.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\ganondorf.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\glurak.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\ike.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\king_dedede.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\kirby.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\link.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\little_mac.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\lucario.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\lucina.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\luigi.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\mario.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\marth.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\mega_man.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\meta_knight.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\mii_fighters.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\ness.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pac_man.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\palutena.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\peach.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pikatchu.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pikmin.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pit.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pummeluff.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\quajutsu.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\rob.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\samus.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\shiek.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\shulk.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\sonic.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\toon_link.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\wario.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\wii_fit_trainer.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\yoshi.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\zelda.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\zerosuite_samus.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_UserName2" sid="1962449876122564">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="btn_bg_gray" sid="2371762042640627">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="727735767554778" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\btn_menu.png">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_bg_tabBar" sid="6256661920629654">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2518320449438087" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\btn_menu.png">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lable_tabBar_1" sid="2924267426685493">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_tabBar_2" sid="3437813743877801">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="734382119370577">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="lable_tabBar_3" sid="9661089072001056">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_tabBar_4" sid="3553916620285944">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_tabBar_5" sid="8270806769600777">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_tabBar_6" sid="888841778444025">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="icon" sid="6519958491055154">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3242670358747926" speed="5">
+                    <frame duration="1" hotspotX="0.506667" hotspotY="0.506667" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\icon_smash.png">
+                        <collision-poly>
+                            <point x="0.146667" y="0.146667" />
+                            <point x="0.493333" y="0" />
+                            <point x="0.853333" y="0.146667" />
+                            <point x="1" y="0.493333" />
+                            <point x="0.853333" y="0.853333" />
+                            <point x="0.493333" y="1" />
+                            <point x="0.146667" y="0.853333" />
+                            <point x="0" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lable_menuBtn1" sid="8961171355910372">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="6616061278890463">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="lable_menuBtn2" sid="3237570956285559">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="8380985179324288">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="lable_menuBtn3" sid="9713607117568877">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Touch" sid="7473437972205505">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="table_bg" sid="9889958904273806">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="5064186342638925">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8578174835634199" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\table_bg.jpg" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\table_bg.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lable_room_name" sid="9962142642574338">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="seed" sid="6992994070963517" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="8182129880145294">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+        </object-type>
+        <object-type name="lable_room_status" sid="2348778729738721">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="515961956580536">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="lable_room_players" sid="975515164411635">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="seed" sid="102215432762854" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="3817044425453435">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+        </object-type>
+        <object-type global="1" name="room_list" sid="78216236664058">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="debug" sid="4928358077748799">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="scrollBG" sid="7122671250267071">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DragDrop" sid="1472569323899402">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+                <behavior-type name="MoveTo" sid="3126623345329994">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1421168549949921" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="button_graycircle" sid="3665426756209226">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9846487452539046" speed="5">
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\button_gray-circle.png">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lable_rank" sid="5270562300957561">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_rank" sid="3514310517707015">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_score" sid="936955508573924">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_score" sid="1016455215870118">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_teamup" sid="2073955243307783">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="txt_rank3" sid="1478591687543289">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="btn_send" sid="9947751683079515">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="MoveTo" sid="2792367984883962">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="loading" sid="3176015420761057">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3033469340189249" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_preload" sid="1877027965980244">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="table_bgColor" sid="4383100246462046" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="btn_close" sid="5716191010531917">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="table_bgColor" sid="2191174787596604" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="txt_PlayerName" sid="8165150133260805">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="ID" sid="8525380031968421" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="avatar_room" sid="6992365388600268">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="6965704148961977" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="50" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3316533525228769" speed="0">
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\bewohner.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\bowser.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\bowser_jr.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\captian_falcon.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\daisy_luma.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\daraen.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\dark_pit.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\diddy_kong.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\donky_kong.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\dr_mario.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\duck_hunt_duo.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\falcon.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\fox.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\game_watch.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\ganondorf.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\glurak.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\ike.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\king_dedede.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\kirby.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\link.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\little_mac.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\lucario.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\lucina.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\luigi.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\mario.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\marth.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\mega_man.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\meta_knight.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\mii_fighters.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\ness.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pac_man.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\palutena.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\peach.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pikatchu.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pikmin.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pit.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\pummeluff.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\quajutsu.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\rob.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\samus.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\shiek.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\shulk.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\sonic.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\toon_link.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\wario.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\wii_fit_trainer.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\yoshi.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\zelda.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\avatarsSSB4\zerosuite_samus.png" />
+                    <frame duration="1" hotspotX="0.503546" hotspotY="0.503546" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\button_invite-friend.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="input_usermail" sid="9794004997444432">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="input_password" sid="5404373484299139">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="WebStorage" sid="7668871048966499">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="AJAX" sid="8678029988097619">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type name="CBHash" sid="7501082507211103">
+            <plugin id="CBhash" />
+        </object-type>
+        <object-type name="input_username" sid="1347399078437253">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="input_password_check" sid="5112288910023213">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="txt_paragraph" sid="9225456787265086">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="table_bgColor" sid="3193419652418172" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="btn_checkbox" sid="6212067196807758">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="checked" sid="6559449319257401" type="boolean" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4548238786670002" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\checkbox.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\checkbox_checked.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lable_NavMenuBtn1" sid="8844944287007158">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_NavMenuBtn2" sid="4616372947515967">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_NavMenuBtn3" sid="4690381246868924">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_NavMenuBtn4" sid="3257335171043406">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_NavMenuBtn5" sid="7123901722798959">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_NavMenuBtn6" sid="7482994632423496">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_NavMenuBtn7" sid="1673383494058826">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="scrollBG2" sid="5720252550900002">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="MoveTo" sid="3463460354100137">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9596902862153196" speed="0">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tile" sid="3994592196276315">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7300339917298587" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="txt_headline" sid="8366683703569858">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="lable_tabBar_7" sid="8504495590736638">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="btn_rdy" sid="1050520850634476">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="state" sid="2700497538484915" type="boolean" />
+            </instance-variables>
+        </object-type>
+        <object-type name="slide_content" sid="7348051116538534">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="id" sid="7049176640351553" type="string" />
+                <instance-variable name="step" sid="6883389769329264" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="MoveTo" sid="7481713992539258">
+                    <behavior id="Rex_MoveTo" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="7074886631639315">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="slide_overlay" sid="8406441166063053">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="7636928388688416">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1408856760725154" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_slide_left" sid="209592737124581">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="id" sid="6445525605663091" type="string" />
+                <instance-variable name="step" sid="8012066283653271" type="number" />
+                <instance-variable name="maxStep" sid="474976016831131" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="7332035273999276">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8062188413731316" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.522727" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\btn_slide.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="btn_slide_right" sid="8497753792438476">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="id" sid="9920835788051966" type="string" />
+                <instance-variable name="step" sid="6431656066720904" type="number" />
+                <instance-variable name="maxStep" sid="8459473459871713" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="3567600271708523">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8375451394104698" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.522727" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlConnect\assets\btn_slide.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="lable_RoomName" sid="3384859100042964">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="dialog_bg_small" sid="5251232892564118">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="7761700791808477">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4501204739462642" speed="0">
+                    <frame duration="1" hotspotX="0.503106" hotspotY="0.507937" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\btn_menu.png">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0" hotspotY="0">
+                        <collision-poly>
+                            <point x="0.037037" y="0.0487805" />
+                            <point x="0.5" y="0" />
+                            <point x="0.962963" y="0.0487805" />
+                            <point x="1" y="0.487805" />
+                            <point x="0.962963" y="0.951219" />
+                            <point x="0.5" y="1" />
+                            <point x="0.037037" y="0.951219" />
+                            <point x="0" y="0.487805" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="dilog_txt_small" sid="741798475777838">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="6790632837788665">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="icon_league" sid="9204518930082488">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seed" sid="9484369426770544" type="string" />
+                <instance-variable name="value" sid="2174353531686653" type="string" />
+            </instance-variables>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9240113835527057" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\icon_smash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="icon_rules" sid="7647718143514638">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seed" sid="5321415026977618" type="string" />
+                <instance-variable name="value" sid="6306315843998178" type="string" />
+            </instance-variables>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5188428868887011" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\icon_smash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="icon_limit" sid="4689847076490745">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seed" sid="4175782703852961" type="string" />
+                <instance-variable name="value" sid="6917666741285592" type="number" />
+            </instance-variables>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2010946124736902" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\icon_smash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="icon_custom" sid="5290885222361389">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seed" sid="3640555219329237" type="string" />
+                <instance-variable name="value" sid="8846678567469488" type="string" />
+            </instance-variables>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8497330170107808" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\icon_smash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="icon_handicap" sid="9782713586911409">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seed" sid="9478290764128342" type="string" />
+                <instance-variable name="value" sid="2643951355671617" type="string" />
+            </instance-variables>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="643182224399698" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\icon_smash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="icon_damage" sid="2947572911128025">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seed" sid="2720252663562247" type="string" />
+                <instance-variable name="value" sid="4052797439168306" type="string" />
+            </instance-variables>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7215952022504896" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\icon_smash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="icon_private" sid="6381642830326449">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="seed" sid="2837932284796223" type="string" />
+                <instance-variable name="value" sid="8278831577720403" type="number" />
+            </instance-variables>
+            <container>
+                <type>lable_room_name</type>
+                <type>lable_room_players</type>
+                <type>table_bg</type>
+                <type>icon_league</type>
+                <type>icon_rules</type>
+                <type>icon_limit</type>
+                <type>icon_custom</type>
+                <type>icon_handicap</type>
+                <type>icon_damage</type>
+                <type>icon_private</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1113080859959043" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Chriz\Desktop\PROJECTS\apps\BrawlBros.net\assets\icon_smash.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Dictionary" sid="7601123260255568">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="lable_menuBtn4" sid="626977898827743">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="150503620338111">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="lable_menuBtn5" sid="437709135079135">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="942710406830141">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="lable_menuBtn6" sid="818400012750460">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="847690253106835">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="movers_sprite" plugin-id="Sprite" sid="1855722583609524">
+            <members>
+                <member>avatar_room</member>
+                <member>btn_bg_tabBar</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="5988404479283344">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="movers_txt" plugin-id="Text" sid="2285522280184829">
+            <members>
+                <member>btn_rdy</member>
+                <member>txt_PlayerName</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="664557546073679">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="menuMovers_sprite" plugin-id="Sprite" sid="2527714801784547">
+            <members>
+                <member>icon</member>
+                <member>icon_custom</member>
+                <member>icon_damage</member>
+                <member>icon_handicap</member>
+                <member>icon_league</member>
+                <member>icon_limit</member>
+                <member>icon_private</member>
+                <member>icon_rules</member>
+                <member>menu_buttonBG</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="1109334006379505">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="menuMover_txt" plugin-id="Text" sid="8111525716562618">
+            <members>
+                <member>lable_NavMenuBtn1</member>
+                <member>lable_NavMenuBtn2</member>
+                <member>lable_NavMenuBtn3</member>
+                <member>lable_NavMenuBtn4</member>
+                <member>lable_NavMenuBtn5</member>
+                <member>lable_NavMenuBtn6</member>
+                <member>lable_NavMenuBtn7</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="1047100356411832">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Fonts" plugin-id="Text" sid="6030884725988553">
+            <members>
+                <member>btn_close</member>
+                <member>btn_rdy</member>
+                <member>btn_send</member>
+                <member>dilog_txt_small</member>
+                <member>Label</member>
+                <member>lable_menuBtn1</member>
+                <member>lable_menuBtn2</member>
+                <member>lable_menuBtn3</member>
+                <member>lable_menuBtn4</member>
+                <member>lable_menuBtn5</member>
+                <member>lable_menuBtn6</member>
+                <member>lable_NavMenuBtn1</member>
+                <member>lable_NavMenuBtn2</member>
+                <member>lable_NavMenuBtn3</member>
+                <member>lable_NavMenuBtn4</member>
+                <member>lable_NavMenuBtn5</member>
+                <member>lable_NavMenuBtn6</member>
+                <member>lable_NavMenuBtn7</member>
+                <member>lable_rank</member>
+                <member>lable_room_name</member>
+                <member>lable_room_players</member>
+                <member>lable_room_status</member>
+                <member>lable_RoomName</member>
+                <member>lable_score</member>
+                <member>lable_tabBar_1</member>
+                <member>lable_tabBar_2</member>
+                <member>lable_tabBar_3</member>
+                <member>lable_tabBar_4</member>
+                <member>lable_tabBar_5</member>
+                <member>lable_tabBar_6</member>
+                <member>lable_tabBar_7</member>
+                <member>lable_teamup</member>
+                <member>slide_content</member>
+                <member>Title</member>
+                <member>txt_BrawlConnect</member>
+                <member>txt_GameLeague</member>
+                <member>txt_GameLeague_ext</member>
+                <member>txt_headline</member>
+                <member>txt_paragraph</member>
+                <member>txt_PlayerName</member>
+                <member>txt_preload</member>
+                <member>txt_rank</member>
+                <member>txt_rank3</member>
+                <member>txt_score</member>
+                <member>txt_UserName</member>
+                <member>txt_UserName2</member>
+            </members>
+        </family>
+        <family name="input_txtBox" plugin-id="TextBox" sid="5742084494837914">
+            <members>
+                <member>ChatLog</member>
+                <member>ChatTextBox</member>
+                <member>debug</member>
+                <member>input_password</member>
+                <member>input_password_check</member>
+                <member>input_usermail</member>
+                <member>input_username</member>
+                <member>NameTextBox</member>
+            </members>
+        </family>
+        <family name="dialog_sprites" plugin-id="Sprite" sid="6608403421460184">
+            <members>
+                <member>dialog_bg_small</member>
+            </members>
+        </family>
+        <family name="dialog_texts" plugin-id="Text" sid="5427952424308365">
+            <members>
+                <member>dilog_txt_small</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>Main_Matches.xml</layout>
+        <layout>Main_Matches_gate.xml</layout>
+        <layout>Main_Matches_join.xml</layout>
+        <layout>openGameRoom.xml</layout>
+        <layout>GameRoom.xml</layout>
+        <layout>Main_Ranking.xml</layout>
+        <layout>Main_Friends.xml</layout>
+        <layout>Main_Clan.xml</layout>
+        <layout>Preload.xml</layout>
+        <layout>login.xml</layout>
+        <layout>register.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>MainMatches.xml</event-sheet>
+        <event-sheet>MainRanking.xml</event-sheet>
+        <event-sheet>MainFriends.xml</event-sheet>
+        <event-sheet>MainMatchesGate.xml</event-sheet>
+        <event-sheet>MainMatchesJoin.xml</event-sheet>
+        <event-sheet>GameRoomEvents.xml</event-sheet>
+        <event-sheet>debugEvenst.xml</event-sheet>
+        <event-sheet>commonEvents.xml</event-sheet>
+        <event-sheet>PreloadEvents.xml</event-sheet>
+        <event-sheet>LoginEvents.xml</event-sheet>
+        <event-sheet>registerEvents.xml</event-sheet>
+        <event-sheet>MainClan.xml</event-sheet>
+        <event-sheet>openGameRoomEvents.xml</event-sheet>
+        <event-sheet>Variables.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Multiplayer" uid="8" />
+        <global-instance type="Keyboard" uid="9" />
+        <global-instance type="Function" uid="10" />
+        <global-instance type="Browser" uid="13" />
+        <global-instance type="Touch" uid="51">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="WebStorage" uid="199" />
+        <global-instance type="AJAX" uid="200" />
+        <global-instance type="CBHash" uid="201" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file name="play-bold-webfont.eot" />
+        <file name="play-bold-webfont.svg" />
+        <file name="play-bold-webfont.ttf" />
+        <file name="play-bold-webfont.woff" />
+        <file name="play-regular-webfont.eot" />
+        <file name="play-regular-webfont.svg" />
+        <file name="play-regular-webfont.ttf" />
+        <file name="play-regular-webfont.woff" />
+        <file name="stylesheet.css" />
+    </files-folder>
+</c2project>
